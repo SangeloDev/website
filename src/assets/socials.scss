@@ -1,0 +1,90 @@
+.container #socials {
+	display: flex; // reaffirming flex, if needed
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-center;
+	text-align: center;
+	height: 100vh;
+}
+
+#socials {
+	content {
+		display: flex;
+		height: 80%;
+		width: 60em;
+		justify-content: center;
+		align-content: center;
+
+		.button-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 2em;
+			margin-top: 10em;
+		}
+
+		.round-button {
+			width: 5em;
+			height: 5em;
+			border-radius: 20px;
+			border: none;
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			transition: ease-in-out 0.1s;
+		}
+
+		.button.discord {
+			background: linear-gradient(162deg, #6d85d8 24.09%, #4a68cc 89.49%);
+		}
+
+		.button.youtube {
+			background: linear-gradient(217deg, #ff5554 50%, #ff7171 94.82%);
+		}
+
+		.button.github {
+			background: linear-gradient(158deg, #24292d 55.62%, #262c30 90.01%);
+		}
+
+		.button.email {
+			background: linear-gradient(158deg, #ec8f5a 55.62%, #ffaf37 90.01%);
+		}
+
+		.round-button:hover {
+			opacity: 0.9;
+		}
+
+		.round-button:active {
+			opacity: 0.8;
+		}
+	}
+
+	footer {
+		margin: 2em;
+
+		svg.logo {
+			height: 3em;
+			width: 3em;
+			cursor: pointer;
+		}
+
+		h1 {
+			margin: 0px;
+		}
+
+		.footer {
+			font-size: 18px;
+		}
+
+		.footer.footer-credits {
+			font-weight: 800;
+			margin-bottom: -0.7em;
+		}
+
+		.emoji {
+			height: 18px;
+		}
+	}
+}

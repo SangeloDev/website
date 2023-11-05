@@ -1,0 +1,41 @@
+// navbar.scss
+
+.dial-navbar {
+	position: fixed;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	font-size: 24px;
+	margin-right: 1em;
+
+    cursor: pointer;
+    user-select: none;
+
+	.page {
+		opacity: 0.5; // Lower opacity for inactive pages
+		transition: opacity 0.3s;
+        font-weight: 500;
+
+		&.active {
+			opacity: 1; // Full opacity for the active page
+            font-weight: 700;
+		}
+	}
+
+	// .first {
+	// 	opacity: 0;
+    //     cursor: default;
+	// }
+
+	// .last {
+	// 	opacity: 0;
+    //     cursor: default;
+	// }
+
+	list-style-position: inside;
+}
