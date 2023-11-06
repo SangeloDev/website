@@ -1,0 +1,22 @@
+@import "./mobile-header.scss";
+
+@media (max-width: 850px) {
+    .section {
+        background-image: none;
+        background-color: $space-black;
+    }
+
+    content {
+        display: flex;
+        height: 80%;
+        width: auto;
+        margin-left: 2em;
+        margin-right: 2em;
+    
+        .about-text {
+            align-self: center;
+            font-size: 18px;
+            white-space: word-break;
+        }
+    }
+}

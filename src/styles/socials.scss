@@ -1,26 +1,52 @@
-.container #socials {
-	display: flex; // reaffirming flex, if needed
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: flex-center;
-	text-align: center;
+/* layout */
+
+.section {
 	height: 100vh;
+	scroll-snap-align: start;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+
 }
+
+/* content */
 
 #socials {
 	content {
 		display: flex;
 		height: 80%;
-		width: 60em;
 		justify-content: center;
 		align-content: center;
+		flex-direction: column;
 
 		.button-container {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			flex-direction: row;
 			gap: 2em;
 			margin-top: 10em;
+			margin-bottom: 2em;
+		}
+
+		.button-container.below {
+			margin: 0;
+			flex-direction: row;
+		}
+
+		.toggle-more {
+			color: $star-gray;
+			cursor: pointer;
+			transition: transform 0.3s ease-in-out;
+			text-decoration: none;
+			align-self: center;
+			width: 4em;
+		}
+
+		.toggle-more.active {
+			margin-top: 2em;
 		}
 
 		.round-button {
@@ -34,6 +60,13 @@
 			align-items: center;
 			cursor: pointer;
 			transition: ease-in-out 0.1s;
+		}
+
+		.icon {
+			--shadow: rgba(0, 0, 0, 0.544);
+			box-shadow: 7px 9px 38px -10px var(--shadow);
+			-webkit-box-shadow: 7px 9px 38px -10px var(--shadow);
+			-moz-box-shadow: 7px 9px 38px -10px var(--shadow);
 		}
 
 		.button.discord {
@@ -50,6 +83,24 @@
 
 		.button.email {
 			background: linear-gradient(158deg, #ec8f5a 55.62%, #ffaf37 90.01%);
+		}
+
+		.button.matrix {
+			background: linear-gradient(145deg, rgb(12, 163, 165) 25%, rgb(19, 174, 122) 100%);
+		}
+
+		.button.gitpot {
+			background: radial-gradient(103.52% 103.52% at 34.04% 26.17%, #fa7042 24.28%, #d23652 120%);
+
+			.icon.gitpot {
+				height: 2.7em;
+				box-shadow: none;
+			}
+		}
+
+		.button.inactive {
+			background: transparent;
+			display: none;
 		}
 
 		.round-button:hover {
@@ -70,10 +121,6 @@
 			cursor: pointer;
 		}
 
-		h1 {
-			margin: 0px;
-		}
-
 		.footer {
 			font-size: 18px;
 		}
@@ -82,9 +129,8 @@
 			font-weight: 800;
 			margin-bottom: -0.7em;
 		}
-
-		.emoji {
-			height: 18px;
-		}
 	}
+
+	@import "./mobile/socials.scss";
 }
+

@@ -1,0 +1,28 @@
+@media (max-width: 850px) {
+    content {
+        .round-button {
+            width: 4.5em;
+            height: 4.5em;
+        }
+
+        .button-container {
+            gap: 1em;
+            margin-top: 10em;
+            margin-bottom: 1em;
+        }
+    }
+
+    footer {
+        margin: 1em;
+
+        svg.logo {
+            height: 2em;
+            width: 2em;
+            cursor: pointer;
+        }
+
+        .footer {
+            font-size: 14px;
+        }
+    }
+}

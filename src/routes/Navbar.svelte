@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
   import { onMount } from 'svelte';
   import { writable } from 'svelte/store';
 
@@ -36,15 +36,15 @@
       smoothScrollTo('home');
     }
   }
-</script>
+</script> -->
 
-<ul class="dial-navbar">
+<!-- <ul class="dial-navbar">
   <li class="page" id="home" on:click={() => smoothScrollTo('home')} class:active={$activeSection === 'home'}>Home</li>
   <li class="page" id="about" on:click={() => smoothScrollTo('about')} class:active={$activeSection === 'about'}>About</li>
   <li class="page" id="projects" on:click={() => smoothScrollTo('projects')} class:active={$activeSection === 'projects'}>Projects</li>
   <li class="page" id="socials" on:click={() => smoothScrollTo('socials')} class:active={$activeSection === 'socials'}>Socials</li>
-</ul>
-
+</ul> -->
+<!-- 
 <style lang="scss">
-  @import "../assets/navbar.scss";
-</style>
+  @import "../styles/navbar.scss";
+</style> -->

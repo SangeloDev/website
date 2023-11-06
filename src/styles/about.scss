@@ -1,12 +1,17 @@
 // about.scss
 
-.container #about {
-    display: flex; // reaffirming flex, if needed
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
-    height: 100vh;
+.section {
+	height: 100vh;
+	scroll-snap-align: start;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	text-align: left;
+	flex-direction: column;
+    background-image: url("/assets/img/banner-bg.svg");
+    background-repeat: no-repeat;
+    background-size: fill;
+    background-position: center, center, 50%, 50%;
 }
 
 #about {
@@ -35,8 +40,11 @@
         margin-left: 6em;
 
         .about-text {
+            z-index: 2;
             align-self: center;
             font-size: 24px;
+            white-space: word-break;
         }
     }
+    @import "./mobile/about.scss";
 }

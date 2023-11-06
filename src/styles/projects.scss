@@ -1,10 +1,14 @@
-.container #projects {
-    display: flex; // reaffirming flex, if needed
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
-    height: 100vh;
+/* layout */
+
+.section {
+	height: 100vh;
+	scroll-snap-align: start;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	text-align: center;
+	flex-direction: column;
+
 }
 
 #projects {
@@ -32,4 +36,6 @@
         width: 60em;
         margin-left: 6em;
     }
+
+    @import "./mobile/projects.scss";
 }
