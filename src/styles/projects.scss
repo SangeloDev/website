@@ -8,34 +8,33 @@
 	align-items: flex-start;
 	text-align: center;
 	flex-direction: column;
-
 }
 
 #projects {
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        margin: 2em;
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		margin: 2em;
 
-        svg.logo {
-            margin-right: 1em;
-            height: 3em;
-            width: 3em;
-            cursor: pointer;
-        }
+		svg.logo {
+			margin-right: 1em;
+			height: 3em;
+			width: 3em;
+			cursor: pointer;
+		}
 
-        h1 {
-            margin: 0px;
-        }
-    }
+		h1 {
+			margin: 0px;
+		}
+	}
 
-    content {
-        display: flex;
-        height: 80%;
-        width: 60em;
-        margin-left: 6em;
-    }
+	content {
+		display: flex;
+		height: 80%;
+		width: 60em;
+		margin-left: 6em;
+	}
 
-    @import "./mobile/projects.scss";
+	@import './mobile/projects.scss';
 }
