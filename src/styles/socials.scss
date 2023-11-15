@@ -8,7 +8,6 @@
 	align-items: center;
 	text-align: center;
 	flex-direction: column;
-
 }
 
 /* content */
@@ -110,6 +109,47 @@
 		.round-button:active {
 			opacity: 0.8;
 		}
+
+		// Tooltips
+		.tooltip {
+			position: relative;
+			display: inline-block;
+		}
+
+		.tooltip .tooltiptext {
+			visibility: hidden;
+			background-color: $space-gray-tooltip;
+			color: $white;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px 10px;
+			position: absolute;
+			z-index: 1000;
+			top: 116%;
+			left: 50%;
+			transform: translateX(-50%);
+			opacity: 0;
+			transition: opacity ease-in-out 0.1s;
+		}
+
+		.tooltiptext {
+			z-index: 1001;
+			user-select: none;
+			cursor: default;
+		}
+
+		.tooltip:hover .tooltiptext {
+			visibility: visible;
+			opacity: 1;
+			backdrop-filter: blur(6px);
+			-webkit-backdrop-filter: blur(6px);
+		}
+
+		.tooltiptext:hover {
+			visibility: hidden;
+			opacity: 0;
+		}
+
 	}
 
 	footer {
@@ -131,6 +171,5 @@
 		}
 	}
 
-	@import "./mobile/socials.scss";
+	@import './mobile/socials.scss';
 }
-

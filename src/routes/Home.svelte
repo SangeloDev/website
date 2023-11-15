@@ -1,6 +1,8 @@
 <script lang='ts'>
     import { goto } from '$app/navigation';
 
+    import IconChevronDown from 'svelte-material-icons/ChevronDown.svelte';
+
     function smoothScrollTo(elementId: string) {
 		const element = document.getElementById(elementId);
 		if (element) {
@@ -65,6 +67,15 @@
             <span class="word-sangelo-color">Sangelo</span><br />and I
             <span class="word-create-color">create</span> things.
         </h1>
+        <div
+            class="chevron"
+            on:click={()=> smoothScrollTo('about')}
+            on:keydown={handleKeydown}
+            role="button"
+            tabindex=0
+        >
+            <IconChevronDown size="1.6em" />
+        </div>
     </header>
 </div>
 

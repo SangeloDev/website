@@ -7,7 +7,7 @@
 </script>
 
 {#key data.pathname}
-	<main in:fly={{ x: 10, duration: 250, delay: 250 }} out:fly={{ x: -5, duration: 250 }}>
+	<main in:fly={{ x: -10, duration: 250, delay: 250 }} out:fly={{ x: 5, duration: 250 }}>
 		<slot />
 	</main>
 {/key}

@@ -5,7 +5,7 @@
 		background-color: transparent;
 		z-index: 1;
 	}
-	
+
 	header {
 		display: flex;
 		flex-direction: column;
@@ -13,7 +13,7 @@
 		justify-content: center;
 		height: 100%;
 	}
-	
+
 	header h1 {
 		font-size: 4em;
 		font-weight: 700;
@@ -21,7 +21,7 @@
 		user-select: text;
 		cursor: text;
 	}
-	
+
 	header .logo {
 		/* width: 145px;
 		  height: 145px; */
@@ -29,23 +29,90 @@
 		height: 8em;
 		transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
-	
+
 	header .logo:hover {
 		filter: drop-shadow(0 4px 10px rgba(0, 145, 251, 0.2));
 	}
-	
+
 	/* colored words */
 	span.word-hello-world-color {
 		color: $french-sky-blue;
 	}
-	
+
 	span.word-sangelo-color {
 		color: $deep-sky-blue;
 	}
-	
+
 	span.word-create-color {
 		color: $capri;
 	}
 
-	@import "./mobile/home.scss";
+	.chevron {
+		opacity: 0;
+		cursor: pointer;
+		animation: jump 1.5s ease-in-out 0s infinite normal, fadeInFadeOut 33s ease-in-out 0s infinite normal;
+	}
+
+	@keyframes jump {
+		0% {
+			transform: translateY(0);
+		}
+		20% {
+			transform: translateY(0);
+		}
+		40% {
+			transform: translateY(-10px);
+		}
+		50% {
+			transform: translateY(0);
+		}
+		60% {
+			transform: translateY(-5px);
+		}
+		80% {
+			transform: translateY(0);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+
+	@-webkit-keyframes jump {
+		0% {
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+		}
+		20% {
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+		}
+		40% {
+			-webkit-transform: translateY(-10px);
+			transform: translateY(-10px);
+		}
+		50% {
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+		}
+		60% {
+			-webkit-transform: translateY(-5px);
+			transform: translateY(-5px);
+		}
+		80% {
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+		}
+		100% {
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fadeInFadeOut {
+		0%, 8% { opacity: 0; }
+		9%, 91% { opacity: 1; }
+		92%, 100% { opacity: 0; }
+	}
+
+	@import './mobile/home.scss';
 }

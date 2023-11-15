@@ -66,7 +66,7 @@
     </header>
     <content>
         <div class="about-text">
-            <h2>Hi! It's me, Sangelo.</h2>
+            <h2>Hi! It's me, <span class="sangelo">Sangelo</span>.</h2>
             <p>
                 I'm a guy who does stuff.<br />
                 <br />

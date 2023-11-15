@@ -1,6 +1,7 @@
 /* layout */
 .container {
 	height: 100vh;
+	width: auto;
 	scroll-snap-type: y mandatory;
 	overflow-y: scroll;
 }
