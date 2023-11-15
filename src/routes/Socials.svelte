@@ -36,10 +36,10 @@
 		'with 🍵',
 		'with 🍪',
 		'with 💤',
-		'with passion',
 		'on a 💻',
 		'in 🏫',
 		'at 🏠',
+		'with passion',
 		'with <img src="/assets/emojis/vscodium.png" alt="VSCodium" style="height: 18px;"/>',
 		'with <img src="/assets/emojis/stackoverflow.png" alt="StackOverflow" style="height: 18px;"/>',
 		'with <img src="/assets/emojis/svelte.png" alt="Svelte" style="height: 18px;" />'
