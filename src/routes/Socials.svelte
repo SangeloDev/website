@@ -9,15 +9,24 @@
 	import IconGitHub from 'svelte-material-icons/Github.svelte';
 	import IconEmailFast from 'svelte-material-icons/EmailFast.svelte';
 	import IconMatrix from 'svelte-material-icons/Matrix.svelte';
-	// import IconGitpot from '$lib/IconGitpot.svelte';
 	import IconChevronDown from 'svelte-material-icons/ChevronDown.svelte';
 	import IconChevronUp from 'svelte-material-icons/ChevronUp.svelte';
+	import IconMastodon from 'svelte-material-icons/Mastodon.svelte';
+	import IconSteam from 'svelte-material-icons/Steam.svelte';
 
 	// Initialisations
 
 	let showMore = false;
 
 	const emojis = [
+		'with ❤️',
+		'with ❤️',
+		'with ❤️',
+		'with ❤️',
+		'with ❤️',
+		'with ❤️',
+		'with ❤️',
+		'with ❤️',
 		'with ❤️',
 		'with ❤️',
 		'with ❤️',
@@ -143,7 +152,18 @@
 			{#if showMore}
 				<div class="button-container below" transition:slide>
 					<div class="tooltip">
-						<a href="#top" class="round-button button inactive" aria-label="Inactive" />
+						<a
+							href="https://steamcommunity.com/id/sangeloo"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="round-button button steam"
+							aria-label="Steam"
+						>
+							<IconSteam class="icon" size="2.5em" />
+						</a>
+						<span class="tooltiptext">@sangeloo</span>
+					</div>
+					<div class="tooltip">
 						<a
 							href="https://matrix.to/#/@sangelo:matrix.org"
 							target="_blank"
@@ -163,8 +183,6 @@
 							class="round-button button gitpot"
 							aria-label="Gitpot"
 						>
-							<!-- <img src="/assets/icons/gitpot.svg" class="icon gitpot" /> -->
-							<!-- <IconGitpot class="icon gitpot"/> -->
 							<svg
 								class="icon gitpot"
 								width="220"
@@ -226,7 +244,18 @@
 						</a>
 						<span class="tooltiptext">/sangelo</span>
 					</div>
-					<a href="#top" class="round-button button inactive" aria-label="Inactive" />
+					<div class="tooltip">
+						<a
+							href="https://mas.to/@sangelo"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="round-button button mastodon"
+							aria-label="Mastodon"
+						>
+							<IconMastodon class="icon" size="2.5em" />
+						</a>
+						<span class="tooltiptext">@sangelo@mas.to</span>
+					</div>
 				</div>
 			{/if}
 		</div>
