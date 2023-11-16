@@ -84,10 +84,17 @@
 		smoothScrollTo('home');
 	}
 
-	function handleKeydown(event: KeyboardEvent) {
+	function handleKeydownHome(event: KeyboardEvent) {
 		// Trigger redirection on Enter key or Space bar
 		if (event.key === 'Enter' || event.key === ' ') {
 			redirectToHome();
+		}
+	}
+
+	function handleKeydownToggleMore(event: KeyboardEvent) {
+		// Trigger redirection on Enter key or Space bar
+		if (event.key === 'Enter' || event.key === ' ') {
+			toggleShowMore();
 		}
 	}
 
@@ -104,6 +111,7 @@
 					href="https://discord.com/users/373525255102136341"
 					target="_blank"
 					rel="noopener noreferrer"
+					tabindex="0"
 					class="round-button button discord"
 					aria-label="Discord"
 				>
@@ -116,6 +124,7 @@
 					href="https://youtube.com/@Sangeloo"
 					target="_blank"
 					rel="noopener noreferrer"
+					tabindex="0"
 					class="round-button button youtube"
 					aria-label="YouTube"
 				>
@@ -128,6 +137,7 @@
 					href="https://github.com/SangeloDev"
 					target="_blank"
 					rel="noopener noreferrer"
+					tabindex="0"
 					class="round-button button github"
 					aria-label="GitHub"
 				>
@@ -140,6 +150,7 @@
 					href="mailto:contact@sangelo.space"
 					target="_blank"
 					rel="noopener noreferrer"
+					tabindex="0"
 					class="round-button button email"
 					aria-label="Email"
 				>
@@ -156,6 +167,7 @@
 							href="https://steamcommunity.com/id/sangeloo"
 							target="_blank"
 							rel="noopener noreferrer"
+							tabindex="0"
 							class="round-button button steam"
 							aria-label="Steam"
 						>
@@ -168,6 +180,7 @@
 							href="https://matrix.to/#/@sangelo:matrix.org"
 							target="_blank"
 							rel="noopener noreferrer"
+							tabindex="0"
 							class="round-button button matrix"
 							aria-label="Matrix"
 						>
@@ -180,6 +193,7 @@
 							href="https://gitpot.dev/Sangelo"
 							target="_blank"
 							rel="noopener noreferrer"
+							tabindex="0"
 							class="round-button button gitpot"
 							aria-label="Gitpot"
 						>
@@ -249,6 +263,7 @@
 							href="https://mas.to/@sangelo"
 							target="_blank"
 							rel="noopener noreferrer"
+							tabindex="0"
 							class="round-button button mastodon"
 							aria-label="Mastodon"
 						>
@@ -262,7 +277,7 @@
 		<div
 			class="toggle-more"
 			on:click={toggleShowMore}
-			on:keydown={handleKeydown}
+			on:keydown={handleKeydownToggleMore}
 			role="button"
 			class:active={showMore}
 			tabindex=0
@@ -285,7 +300,7 @@
 			xmlns="http://www.w3.org/2000/svg"
 			tabindex="0"
 			on:click={redirectToHome}
-			on:keydown={handleKeydown}
+			on:keydown={handleKeydownHome}
 		>
 			<mask
 				id="mask0_1404_2"
