@@ -25,7 +25,6 @@
 	function openWebsite(url: string) {
 		goto(url);
 	}
-
 </script>
 
 <div id="projects" class="section">
@@ -65,7 +64,37 @@
 		</svg>
 		<h1 class="no-select">Projects</h1>
 	</header>
-	<content />
+	<content>
+		<div class="content-container">
+			<div class="container">
+				<div class="one">
+					<button class="button inactive" />
+					<button class="button inactive" />
+					<button class="button sangelo"></button>
+					<button class="button lunivity"></button>
+				</div>
+				<div class="two">
+					<button class="button gitpot"></button>
+					<button class="button utility"></button>
+					<button class="button spectrumgal"></button>
+					<button class="button spacebot"></button>
+				</div>
+				<div class="thr">
+					<button class="button inactive" />
+					<button class="button sangefault"></button>
+					<button class="button next"></button>
+					<button class="button inactive" />
+				</div>
+			</div>
+			<div class="tip">
+				<p>
+					Click on a<br>
+					<span class="capri">bubble</span> for<br>
+					more <span class="french-sky">info</span>.
+				</p>
+			</div>
+		</div>
+	</content>
 </div>
 
 <style lang="scss">

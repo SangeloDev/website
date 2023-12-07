@@ -337,14 +337,4 @@
 
 <style lang="scss">
 	@import '../styles/socials.scss';
-
-	// .rotate-up {
-	// 	transform: rotate(0deg);
-	// 	transition: transform 0.3s ease-in-out;
-	// }
-
-	// .rotate-down {
-	// 	transform: rotate(180deg);
-	// 	transition: transform 0.3s ease-in-out;
-	// }
 </style>

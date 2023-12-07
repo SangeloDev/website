@@ -1,5 +1,33 @@
 @import "./mobile-header.scss";
 
 @media (max-width: 850px) {
+    content {
+        .content-container {
+            flex-wrap: wrap;
+            margin: 0;
     
+            .container {
+                grid-template-columns: 6em 6em 6em 6em;
+                grid-template-rows: 6em 6em 6em;
+                gap: 1em 1em;
+                margin: 0;
+                margin-top: 10%;
+                // margin-bottom: -40%;
+                // margin-left: -20%
+            }
+    
+            .button {
+                width: 6em;
+                height: 6em;
+                border-radius: 20px;
+                margin: 0 0 0 1em;
+                background-size: 6em;
+            }
+
+            .tip {
+                text-align: center;
+                line-height: 130%;
+            }
+        }
+    }
 }

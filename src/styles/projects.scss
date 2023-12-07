@@ -32,8 +32,114 @@
 	content {
 		display: flex;
 		height: 80%;
-		width: 60em;
-		margin-left: 6em;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+
+		.content-container {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.container {
+				display: grid;
+				grid-template-columns: 7em 7em 7em 7em;
+				grid-template-rows: 7em 7em 7em;
+				gap: 2em 2em;
+				grid-template-areas:
+					'one one one one'
+					'two two two two'
+					'thr thr thr thr';
+				transform: rotate(-45deg);
+				margin-right: -4em;
+				margin-bottom: -15%;
+				user-select: none;
+				cursor: default;
+			}
+	
+			.one {
+				grid-area: one;
+			}
+	
+			.two {
+				grid-area: two;
+			}
+	
+			.thr {
+				grid-area: thr;
+			}
+	
+			.button {
+				width: 8em;
+				height: 8em;
+				border-radius: 25px;
+				border: none;
+				color: white;
+				cursor: pointer;
+				transition: ease-in-out 0.1s;
+				margin: 0 0 0 2em;
+				overflow: hidden;
+				background-size: 8em;
+			}
+
+			.button:hover {
+				opacity: 0.9;
+			}
+	
+			.button:active {
+				opacity: 0.8;
+			}
+	
+			.inactive {
+				visibility: hidden;
+			}
+	
+			.sangelo {
+				background-image: url('/assets/logos/sangelo.svg');
+			}
+	
+			.lunivity {
+				background-image: url('/assets/logos/lunivity.svg');
+			}
+	
+			.gitpot {
+				background-color: #161417;
+				background-image: url('/assets/logos/gitpot.svg');
+			}
+	
+			.utility {
+				background-image: url('/assets/logos/utilityclient.svg');
+			}
+	
+			// .spectrumgal {
+			// 	grid-area: 🌕;
+			// }
+	
+			// .spacebot {
+			// 	grid-area: 🤖;
+			// }
+	
+			// .sangefault {
+			// 	grid-area: 🎨;
+			// }
+			
+			.tip {
+				width: 10em;
+				text-align: left;
+				font-weight: 600;
+				font-size: 25px;
+				z-index: 100;
+				margin-left: 1em;
+	
+				.capri {
+					color: $capri;
+				}
+				.french-sky {
+					color: $french-sky-blue;
+				}
+			}
+		}
 	}
 
 	@import './mobile/projects.scss';
