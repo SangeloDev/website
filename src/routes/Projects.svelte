@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 
+	import IconNext from 'svelte-material-icons/ArrowRight.svelte'
+
 	function smoothScrollTo(elementId: string) {
 		const element = document.getElementById(elementId);
 		if (element) {
@@ -65,8 +67,8 @@
 		<h1 class="no-select">Projects</h1>
 	</header>
 	<content>
-		<div class="content-container">
-			<div class="container">
+		<div class="container">
+			<div class="grid">
 				<div class="one">
 					<button class="button inactive" />
 					<button class="button inactive" />
@@ -76,8 +78,8 @@
 				<div class="two">
 					<button class="button gitpot"></button>
 					<button class="button utility"></button>
-					<button class="button spectrumgal"></button>
-					<button class="button spacebot"></button>
+					<button class="button explorecraft"></button>
+					<button class="button dashinit"></button>
 				</div>
 				<div class="thr">
 					<button class="button inactive" />

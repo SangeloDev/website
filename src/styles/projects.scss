@@ -36,16 +36,16 @@
 		align-items: center;
 		justify-content: center;
 
-		.content-container {
+		.container {
 			height: 100%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 
-			.container {
+			.grid {
 				display: grid;
-				grid-template-columns: 7em 7em 7em 7em;
-				grid-template-rows: 7em 7em 7em;
+				grid-template-columns: 8em 8em 8em 8em;
+				grid-template-rows: 8em 8em 8em;
 				gap: 2em 2em;
 				grid-template-areas:
 					'one one one one'
@@ -56,6 +56,7 @@
 				margin-bottom: -15%;
 				user-select: none;
 				cursor: default;
+				align-items: center;
 			}
 	
 			.one {
@@ -112,17 +113,25 @@
 				background-image: url('/assets/logos/utilityclient.svg');
 			}
 	
-			// .spectrumgal {
-			// 	grid-area: 🌕;
-			// }
+			.explorecraft {
+				background-image: url('/assets/logos/explorecraft.svg');
+			}
 	
-			// .spacebot {
-			// 	grid-area: 🤖;
-			// }
+			.dashinit {
+				background-image: url('/assets/logos/dashinit.svg');
+			}
 	
-			// .sangefault {
-			// 	grid-area: 🎨;
-			// }
+			.sangefault {
+				background-image: url('/assets/logos/sangefault.svg');
+			}
+
+			.next {
+				background-color: $space-cadet;
+				background-image: url('/assets/icons/next.svg');
+				background-size: 3em;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
 			
 			.tip {
 				width: 10em;
