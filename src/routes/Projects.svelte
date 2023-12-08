@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 
-	import IconNext from 'svelte-material-icons/ArrowRight.svelte'
-
 	function smoothScrollTo(elementId: string) {
 		const element = document.getElementById(elementId);
 		if (element) {
