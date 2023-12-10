@@ -6,6 +6,7 @@
 	import ExploreCraftModal from './modals/explorecraft.svelte';
 	import UtilityClientModal from './modals/utilityclient.svelte';
 	import SangeloSpaceModal from './modals/sangelospace.svelte'
+	import MoreProjectsModal from './modals/more.svelte';
 	// import type { SvelteComponent } from 'svelte';
 
 	let showModal = false;
@@ -40,10 +41,6 @@
 		if (event.key === 'Enter' || event.key === ' ') {
 			redirectToHome();
 		}
-	}
-
-	function openWebsite(url: string) {
-		goto(url);
 	}
 </script>
 
@@ -91,10 +88,10 @@
 					<button class="button inactive" />
 					<button class="button inactive" />
 					<button class="button sangelo" on:click={() => openModalWith(SangeloSpaceModal)} />
-					<a href="https://lunivity.com" rel="noopener noreferrer" target="_blank"><button class="button lunivity" /></a>
+					<a href="https://lunivity.com" rel="noopener noreferrer" target="_blank" tabindex="-1"><button class="button lunivity" /></a>
 				</div>
 				<div class="two">
-					<a href="https://gitpot.dev" rel="noopener noreferrer" target="_blank"><button class="button gitpot" /></a>
+					<a href="https://gitpot.dev" rel="noopener noreferrer" target="_blank" tabindex="-1"><button class="button gitpot" /></a>
 					<button class="button utility" on:click={() => openModalWith(UtilityClientModal)} />
 					<button class="button explorecraft" on:click={() => openModalWith(ExploreCraftModal)} />
 					<button class="button dashinit" on:click={() => openModalWith(DashinitModal)} />
@@ -102,7 +99,7 @@
 				<div class="thr">
 					<button class="button inactive" />
 					<button class="button sangefault" on:click={() => openModalWith(SangeFaultModal)} />
-					<button class="button next" />
+					<button class="button next" on:click={() => openModalWith(MoreProjectsModal)} />
 					<button class="button inactive" />
 				</div>
 			</div>

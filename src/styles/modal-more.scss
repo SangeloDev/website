@@ -1,0 +1,127 @@
+.parent {
+	h1.modal-title,
+    h2.modal-title {
+		margin: 0 auto 0.2em auto;
+	}
+
+    h2.modal-title {
+        margin-top: 1em;
+    }
+
+    p.modal-title {
+        margin: 0 auto 2em auto;
+    }
+
+	.gallery {
+		.next-icon {
+			background: url('/assets/icons/next.svg');
+			background-color: $space-cadet;
+			background-repeat: no-repeat;
+			background-size: 5em;
+			background-position: center;
+			margin-right: 2em;
+			border-radius: 0.8em;
+			height: 15em;
+			width: 15em;
+			transition: ease-in-out 0.3s;
+		}
+
+		.next-icon:hover {
+			box-shadow: 10px 10px 69px -32px rgba(0, 0, 0, 0.5);
+			-webkit-box-shadow: 10px 10px 69px -32px rgba(0, 0, 0, 0.5);
+		}
+	}
+}
+
+/* Style for the item list */
+.item-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&::before {
+        content: '';
+		position: fixed;
+		left: 9%;
+		bottom: calc(10% - 0.96em);
+		height: calc(100% + 1em); // 1em higher than the button
+		height: 15%;
+		width: 82%;
+		pointer-events: none;
+		background: linear-gradient(to top, $space-gray, transparent);
+		background: -webkit-linear-gradient(to top, $space-gray, transparent);
+		z-index: 1001; // Place it behind the button
+	}
+
+	.item {
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		margin-bottom: 1em;
+		width: 100%;
+		cursor: pointer;
+		transition: ease-in-out 0.03s;
+        color: white;
+        text-decoration: none;
+
+		&::after {
+			content: '>';
+			margin-right: 1.5em;
+		}
+
+		.thumbnail {
+			img {
+				border-radius: 8px;
+				max-width: 4em;
+				max-height: 4em;
+				margin: 10% 2em 3.5% 10%;
+			}
+		}
+
+		.item-details {
+			flex-grow: 1;
+
+			h2 {
+				margin: 0 auto 0 auto;
+			}
+
+			.item-description {
+				margin: 0 auto 0.5em auto;
+			}
+		}
+	}
+
+	.item:hover {
+		opacity: 0.9;
+	}
+
+	.item:active {
+		opacity: 0.8;
+		transform: scale(0.995);
+	}
+
+    .item.inactive,
+    .item.inactive:hover,
+    .item.inactive:active {
+        opacity: 0.5;
+        transform: none;
+    }
+
+	/* Add background color to every other item */
+	.item:nth-child(even) {
+		background-color: $space-black-modal;
+	}
+
+	.no-select {
+		user-select: none;
+	}
+}
+
+.end-text {
+    margin: 4% auto 0 auto;
+    color: $star-gray;
+    text-align: center;
+}

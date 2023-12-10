@@ -22,8 +22,8 @@ content {
 
 
         img.project-logo:hover {
-            box-shadow: 10px 10px 71px -32px rgba(0, 0, 0, 0.5);
-            -webkit-box-shadow: 10px 10px 71px -32px rgba(0,0,0,0.5);
+            box-shadow: 10px 10px 69px -32px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 10px 10px 69px -32px rgba(0,0,0,0.5);
         }
 	}
 
@@ -47,6 +47,7 @@ content {
 			width: 82%;
 			pointer-events: none;
 			background: linear-gradient(to top, $space-gray, transparent);
+			background: -webkit-linear-gradient(to top, $space-gray, transparent);
 			z-index: 1001; // Place it behind the button
 		}
 

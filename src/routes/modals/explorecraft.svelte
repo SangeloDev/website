@@ -15,11 +15,11 @@
 				<template>
                     <link
                         rel="stylesheet"
-                        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.4.0/github-markdown.css?123456789"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.4.0/github-markdown-dark.min.css"
                     />
 					<link
 						rel="stylesheet"
-						href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-atom-dark.min.css?123456789"
+						href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-atom-dark.min.css"
 					/>
                     <link
                         rel="stylesheet"
@@ -35,6 +35,7 @@
 			target="_blank"
 			rel="noopener noreferrer"
 			href="{projectSite}"
+			tabindex="-1"
 			><button>
 				<IconOpenInNew size="1.2em" />
 				<p>Visit Project</p>
