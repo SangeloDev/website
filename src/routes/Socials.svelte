@@ -328,7 +328,7 @@
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			Designed and developed
-			<span class="dynamic-icon" on:click={() => openWebsite('https://sangelo.space')}
+			<span class="dynamic-icon" on:click={() => openWebsite('/old')}
 				>{@html emoji}</span
 			> by Sangelo.
 		</p>
