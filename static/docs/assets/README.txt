@@ -1,0 +1,1 @@
+# this directory is a fix for explorecraft project readme not loading screenshots

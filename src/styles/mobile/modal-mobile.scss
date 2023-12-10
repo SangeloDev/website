@@ -1,0 +1,36 @@
+@media (max-width: 850px) {
+    content {
+        .parent {
+			display: grid;
+			grid-template-columns: repeat(1, 2fr);
+			grid-template-rows: auto 1fr; // Adjusted to 2 rows
+			grid-column-gap: 0px;
+			grid-row-gap: 0px;
+            overflow: scroll;
+            margin: 0 5% 15% 5%;
+            
+            .gallery {
+                display: grid;
+                justify-items: center;
+
+                img.project-logo {
+                    height: 5em;
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .button-container {
+            bottom: 7.5%;
+
+            &::before {
+                bottom: 5.9%;
+                width: 80%;
+            }
+
+            button {
+                font-size: 20px;
+            }
+        }
+    }
+}

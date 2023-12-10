@@ -31,6 +31,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"md-block": "^0.0.1",
 		"svelte-material-icons": "^3.0.5",
 		"svelte-transition": "^0.0.10"
 	}

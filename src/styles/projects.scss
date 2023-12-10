@@ -46,7 +46,7 @@
 				display: grid;
 				grid-template-columns: 8em 8em 8em 8em;
 				grid-template-rows: 8em 8em 8em;
-				gap: 2em 2em;
+				gap: 1em 2em;
 				grid-template-areas:
 					'one one one one'
 					'two two two two'
@@ -82,6 +82,8 @@
 				margin: 0 0 0 2em;
 				overflow: hidden;
 				background-size: 8em;
+				background-position: center;
+				background-repeat: no-repeat;
 			}
 
 			.button:hover {
@@ -129,8 +131,6 @@
 				background-color: $space-cadet;
 				background-image: url('/assets/icons/next.svg');
 				background-size: 3em;
-				background-position: center;
-				background-repeat: no-repeat;
 			}
 			
 			.tip {
@@ -138,7 +138,7 @@
 				text-align: left;
 				font-weight: 600;
 				font-size: 25px;
-				z-index: 100;
+				z-index: 1;
 				margin-left: 1em;
 	
 				.capri {

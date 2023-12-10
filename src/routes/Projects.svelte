@@ -1,5 +1,25 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import Modal from './Modal.svelte';
+	import DashinitModal from './modals/dashinit.svelte';
+	import SangeFaultModal from './modals/sangefault.svelte';
+	import ExploreCraftModal from './modals/explorecraft.svelte';
+	import UtilityClientModal from './modals/utilityclient.svelte';
+	import SangeloSpaceModal from './modals/sangelospace.svelte'
+	// import type { SvelteComponent } from 'svelte';
+
+	let showModal = false;
+	let selectedModule: any = null;
+
+	function openModalWith(module: any) {
+		selectedModule = module;
+		showModal = true;
+	}
+
+	function handleModalClose() {
+		showModal = false;
+	}
+
 
 	function smoothScrollTo(elementId: string) {
 		const element = document.getElementById(elementId);
@@ -70,29 +90,32 @@
 				<div class="one">
 					<button class="button inactive" />
 					<button class="button inactive" />
-					<button class="button sangelo"></button>
-					<button class="button lunivity"></button>
+					<button class="button sangelo" on:click={() => openModalWith(SangeloSpaceModal)} />
+					<a href="https://lunivity.com" rel="noopener noreferrer" target="_blank"><button class="button lunivity" /></a>
 				</div>
 				<div class="two">
-					<button class="button gitpot"></button>
-					<button class="button utility"></button>
-					<button class="button explorecraft"></button>
-					<button class="button dashinit"></button>
+					<a href="https://gitpot.dev" rel="noopener noreferrer" target="_blank"><button class="button gitpot" /></a>
+					<button class="button utility" on:click={() => openModalWith(UtilityClientModal)} />
+					<button class="button explorecraft" on:click={() => openModalWith(ExploreCraftModal)} />
+					<button class="button dashinit" on:click={() => openModalWith(DashinitModal)} />
 				</div>
 				<div class="thr">
 					<button class="button inactive" />
-					<button class="button sangefault"></button>
-					<button class="button next"></button>
+					<button class="button sangefault" on:click={() => openModalWith(SangeFaultModal)} />
+					<button class="button next" />
 					<button class="button inactive" />
 				</div>
 			</div>
 			<div class="tip">
 				<p>
-					Click on a<br>
-					<span class="capri">bubble</span> for<br>
+					Click on a<br />
+					<span class="capri">bubble</span> for<br />
 					more <span class="french-sky">info</span>.
 				</p>
 			</div>
+
+			<!-- Show modals -->
+			<Modal show={showModal} on:close={handleModalClose} contentComponent={selectedModule} />
 		</div>
 	</content>
 </div>

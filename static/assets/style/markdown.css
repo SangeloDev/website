@@ -1,0 +1,38 @@
+.markdown-body {
+    /* padding: 0.5em;
+    border-radius: 12px; */
+    margin-top: 1em;
+    background: transparent;
+    font-family: 'Manrope', sans-serif;
+    overflow: auto;
+
+    h1,
+    h2 {
+        border-bottom: 1px solid #878894;
+    }
+
+    blockquote {
+        background-color: #2b2d426c;
+        color: #ffffff;
+        border-left: .25em solid #121316;
+        padding: 0.5em;
+    }
+}
+
+a {
+    color: #0091fb;
+}
+
+a:hover {
+    color: #00b2fa;
+}
+
+a:visited {
+    color: #00c4fb;
+}
+code {
+    font-family: 'Hack', sans-serif;
+    background-color: #2b2d42;
+    border-radius: 8px;
+    padding: 0.1em 0.2em 0.1em 0.2em;
+}
