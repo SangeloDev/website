@@ -92,9 +92,9 @@
 				</div>
 				<div class="two">
 					<a href="https://gitpot.dev" rel="noopener noreferrer" target="_blank" tabindex="-1"><button class="button gitpot" /></a>
-					<button class="button utility" on:click={() => openModalWith(UtilityClientModal)} />
-					<button class="button explorecraft" on:click={() => openModalWith(ExploreCraftModal)} />
 					<button class="button dashinit" on:click={() => openModalWith(DashinitModal)} />
+					<button class="button explorecraft" on:click={() => openModalWith(ExploreCraftModal)} />
+					<button class="button utility" on:click={() => openModalWith(UtilityClientModal)} />
 				</div>
 				<div class="thr">
 					<button class="button inactive" />

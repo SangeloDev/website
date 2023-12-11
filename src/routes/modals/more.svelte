@@ -52,11 +52,11 @@
 						<p class="item-description">Code so sweet, bugs can't compete! A Forgejo-powered git forge which is part of the Lunivity Circle.</p>
 					</div>
 				</a>
-				<a class="item" href="https://uc.gamingcraft.de" rel="noopener noreferrer" target="_blank" tabindex="0">
-					<div class="thumbnail"><img src="assets/logos/utilityclient.svg" alt="UtilityClient Logo" /></div>
+				<a class="item" href="https://gitpot.dev/dashinit/cli" rel="noopener noreferrer" target="_blank" tabindex="0">
+					<div class="thumbnail"><img src="assets/logos/dashinit.svg" alt="dashinit Logo" /></div>
 					<div class="item-details">
-						<h2>UtilityClient</h2>
-						<p class="item-description">Performance oriented 1.8.9 Minecraft Client. I'm responsible for UI/UX.</p>
+						<h2>dashinit</h2>
+						<p class="item-description">A nim-powered initializer that's fast, fully configurable, and effortlessly sets up your projects.</p>
 					</div>
 				</a>
 				<a class="item" href="https://explorecraft.net" rel="noopener noreferrer" target="_blank" tabindex="0">
@@ -66,11 +66,11 @@
 						<p class="item-description">Minecraft 1.19.2 Quilt modpack oriented towards exploration. Powered by packwiz!</p>
 					</div>
 				</a>
-				<a class="item" href="https://gitpot.dev/dashinit/cli" rel="noopener noreferrer" target="_blank" tabindex="0">
-					<div class="thumbnail"><img src="assets/logos/dashinit.svg" alt="dashinit Logo" /></div>
+				<a class="item" href="https://uc.gamingcraft.de" rel="noopener noreferrer" target="_blank" tabindex="0">
+					<div class="thumbnail"><img src="assets/logos/utilityclient.svg" alt="UtilityClient Logo" /></div>
 					<div class="item-details">
-						<h2>dashinit</h2>
-						<p class="item-description">A nim-powered initializer that's fast, fully configurable, and effortlessly sets up your projects.</p>
+						<h2>UtilityClient</h2>
+						<p class="item-description">Performance oriented 1.8.9 Minecraft Client. I'm responsible for UI/UX.</p>
 					</div>
 				</a>
 				<a class="item" href="https://github.com/SangeloDev/SangeFault" rel="noopener noreferrer" target="_blank" tabindex="0">
@@ -87,7 +87,7 @@
 
 			<ul class="item-list">
 				<a class="item inactive" href="https://github.com/runestudios" rel="noopener noreferrer" target="_blank" tabindex="0">
-					<div class="thumbnail"><img src="assets/logos/runestudios.svg" alt="Sangelo's Logo" /></div>
+					<div class="thumbnail"><img src="assets/logos/runestudios.svg" alt="RuneStudios Logo" /></div>
 					<div class="item-details">
 						<h2>RuneStudios</h2>
 						<p class="item-description">Small group of passionate devs and designers.</p>
@@ -95,14 +95,14 @@
 				</a>
 				<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 				<div class="item inactive" tabindex="0">
-					<div class="thumbnail"><img src="assets/logos/spectrumgalaxy.svg" alt="Sangelo's Logo" /></div>
+					<div class="thumbnail"><img src="assets/logos/spectrumgalaxy.svg" alt="SpectrumGalaxy Logo" /></div>
 					<div class="item-details">
 						<h2>SpectrumGalaxy</h2>
 						<p class="item-description">Was-to-be a Minecraft minigame server network with original minigames.</p>
 					</div>
 				</div>
 				<a class="item inactive" href="https://github.com/SangeloDev/SpaceBot" rel="noopener noreferrer" target="_blank" tabindex="0">
-					<div class="thumbnail"><img src="assets/logos/spacebot.svg" alt="Sangelo's Logo" /></div>
+					<div class="thumbnail"><img src="assets/logos/spacebot.svg" alt="Spacebot Logo" /></div>
 					<div class="item-details">
 						<h2>Spacebot</h2>
 						<p class="item-description">A Discord bot made to do general moderation and management tasks.</p>
