@@ -15,14 +15,6 @@
 				<template>
                     <link
                         rel="stylesheet"
-                        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.4.0/github-markdown-dark.min.css"
-                    />
-					<link
-						rel="stylesheet"
-						href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-atom-dark.min.css"
-					/>
-                    <link
-                        rel="stylesheet"
                         href="/assets/style/markdown.css"
                     />
 				</template>

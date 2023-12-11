@@ -1,3 +1,6 @@
+@import url('github-markdown-dark.min.css');
+@import url('prism-atom-dark.min.css');
+
 .markdown-body {
     /* padding: 0.5em;
     border-radius: 12px; */
