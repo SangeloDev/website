@@ -95,7 +95,7 @@
 				</a>
 				<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 				<div class="item inactive" tabindex="0">
-					<div class="thumbnail"><img src="assets/logos/spectrumgalaxy.svg" alt="SpectrumGalaxy Logo" /></div>
+					<div class="thumbnail"><img src="assets/logos/spectrumgalaxy.png" alt="SpectrumGalaxy Logo" /></div>
 					<div class="item-details">
 						<h2>SpectrumGalaxy</h2>
 						<p class="item-description">Was-to-be a Minecraft minigame server network with original minigames.</p>
