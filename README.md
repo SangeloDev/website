@@ -16,7 +16,7 @@ yarn install
 yarn run dev
 
 # or start the server and open the app in a new browser tab
-yarn run dev -- --open
+yarn run dev --open
 ```
 
 Once you've made your changes, you can create a Pull Request and I'll make sure to check it out!
