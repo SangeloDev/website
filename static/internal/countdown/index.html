@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    (c) Sangelo
+    Simple countdown webpage that can be used as a startpage
+    You can feed the date the counter should be counting down to in the URL like this:
+    http://<countdown>/?date=YYYY-MM-DDTHH:MM:SS
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            background: radial-gradient(circle, #414144, #202123);
+            background-size: 100% 500%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: monospace, monospace;
+            color: #ffffff75;
+        }
+
+        #countdown {
+            font-size: 200px;
+            margin: 0 20px;
+            opacity: 1;
+            transition: opacity 0.5s;
+            pointer-events: none;
+        }
+
+        .completed {
+            color: #fff; /* Full opacity when countdown is completed */
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown">000:00:00:00</div>
+
+    <script async>
+        function formatWithLeadingZeros(number, length) {
+            return number.toLocaleString('en-US', {minimumIntegerDigits: length, useGrouping: false});
+        }
+
+        const countdownElement = document.getElementById("countdown");
+        const countdownDate = getDateFromUrl();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            if (distance <= 0) {
+                countdownElement.innerHTML = "🥳";
+                countdownElement.classList.add("completed");
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const formattedDays = formatWithLeadingZeros(days, 3);
+            const formattedHours = formatWithLeadingZeros(hours, 2);
+            const formattedMinutes = formatWithLeadingZeros(minutes, 2);
+            const formattedSeconds = formatWithLeadingZeros(seconds, 2);
+
+            countdownElement.innerHTML = `${formattedDays}:${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+            requestAnimationFrame(updateCountdown);
+        }
+
+        function getDateFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const dateParam = urlParams.get('date');
+            if (dateParam) {
+                const timestamp = Date.parse(dateParam);
+                if (!isNaN(timestamp)) {
+                    return timestamp;
+                }
+            }
+            return new Date("1970-01-01T00:00:00").getTime();
+        }
+
+        requestAnimationFrame(updateCountdown);
+    </script>
+</body>
+</html>
+
