@@ -5,7 +5,8 @@
 	import SangeFaultModal from './modals/sangefault.svelte';
 	import ExploreCraftModal from './modals/explorecraft.svelte';
 	import UtilityClientModal from './modals/utilityclient.svelte';
-	import SangeloSpaceModal from './modals/sangelospace.svelte'
+	import SangeloSpaceModal from './modals/sangelospace.svelte';
+	import LunivityModal from './modals/lunivity.svelte';
 	import MoreProjectsModal from './modals/more.svelte';
 	// import type { SvelteComponent } from 'svelte';
 
@@ -88,7 +89,7 @@
 					<button class="button inactive" />
 					<button class="button inactive" />
 					<button class="button sangelo" on:click={() => openModalWith(SangeloSpaceModal)} />
-					<a href="https://lunivity.com" rel="noopener noreferrer" target="_blank" tabindex="-1"><button class="button lunivity" /></a>
+					<button class="button lunivity" on:click={() => openModalWith(LunivityModal)} />
 				</div>
 				<div class="two">
 					<a href="https://gitpot.dev" rel="noopener noreferrer" target="_blank" tabindex="-1"><button class="button gitpot" /></a>
