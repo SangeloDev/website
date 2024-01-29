@@ -83,7 +83,7 @@
 			</ul>
 
 			<h2 class="modal-title no-select"><IconArchive /> Archive</h2>
-			<p class="modal-title">These are projects that have either been archived or don't see a lot of work anymore.</p>
+			<p class="modal-title">These are projects that have either been archived or don't see a lot of work anymore. They might or might not return some day.</p>
 
 			<ul class="item-list">
 				<a class="item inactive" href="https://github.com/runestudios" rel="noopener noreferrer" target="_blank" tabindex="0">
