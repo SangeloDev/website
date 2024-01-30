@@ -82,7 +82,7 @@
 			padding: 1em;
 			box-shadow: 0px 2px 10px $space-black-modal;
 			z-index: 1001;
-            overflow: auto;
+            // overflow: auto;
 		}
 
 		.close-button {

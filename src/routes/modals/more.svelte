@@ -27,7 +27,7 @@
 		<div class="gallery">
 			<div class="next-icon" />
 		</div>
-		<div>
+		<div class="content">
 			<h1 class="modal-title no-select">All Projects</h1>
 			<p class="modal-title">These are all of my projects, including the ones that didn't fit in the homepage. Take a look!</p>
 			<ul class="item-list">

@@ -10,8 +10,8 @@
         <div class="gallery">
             <img src="{projectLogo}" class="project-logo" alt="Project Logo" />
 		</div>
-		<div>
-			<zero-md class="markdown" src="{projectReadme}">
+		<div class="content">
+			<zero-md src="{projectReadme}">
 				<template>
                     <link
                         rel="stylesheet"

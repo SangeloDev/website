@@ -8,6 +8,10 @@
 			grid-row-gap: 0px;
             overflow: scroll;
             margin: 0 5% 15% 5%;
+
+            .content {
+                margin-top: 1em;
+            }
             
             .gallery {
                 display: grid;
