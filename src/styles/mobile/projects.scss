@@ -33,6 +33,10 @@
             .next {
 				background-size: 2em;
 			}
+
+            .gitpot {
+				background: url('/assets/icons/gitpot.svg') no-repeat center / 3.5em, radial-gradient(103.52% 103.52% at 34.04% 26.17%, #fa7042 24.28%, #d23652 120%) no-repeat center;
+			}
         }
     }
 }
