@@ -86,11 +86,11 @@
 			<p class="modal-title">These are projects that have either been archived or don't see a lot of work anymore. They might or might not return some day.</p>
 
 			<ul class="item-list">
-				<a class="item inactive" href="https://github.com/runestudios" rel="noopener noreferrer" target="_blank" tabindex="0">
-					<div class="thumbnail"><img src="assets/logos/runestudios.svg" alt="RuneStudios Logo" /></div>
+				<a class="item inactive" href="https://github.com/SangeloDev/Unique" rel="noopener noreferrer" target="_blank" tabindex="0">
+					<div class="thumbnail"><img src="assets/logos/unique.svg" alt="RuneStudios Logo" /></div>
 					<div class="item-details">
-						<h2>RuneStudios</h2>
-						<p class="item-description">Small group of passionate devs and designers.</p>
+						<h2>Unique</h2>
+						<p class="item-description">A Minecraft 1.18.2 Plugin that aims to make the use of Essentials-like tools as user-friendly as possible. Made as a school project.</p>
 					</div>
 				</a>
 				<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
@@ -101,6 +101,13 @@
 						<p class="item-description">Was-to-be a Minecraft minigame server network with original minigames.</p>
 					</div>
 				</div>
+				<a class="item inactive" href="https://github.com/runestudios" rel="noopener noreferrer" target="_blank" tabindex="0">
+					<div class="thumbnail"><img src="assets/logos/runestudios.svg" alt="RuneStudios Logo" /></div>
+					<div class="item-details">
+						<h2>RuneStudios</h2>
+						<p class="item-description">Small group of passionate devs and designers.</p>
+					</div>
+				</a>
 				<a class="item inactive" href="https://github.com/SangeloDev/SpaceBot" rel="noopener noreferrer" target="_blank" tabindex="0">
 					<div class="thumbnail"><img src="assets/logos/spacebot.svg" alt="Spacebot Logo" /></div>
 					<div class="item-details">
@@ -108,15 +115,19 @@
 						<p class="item-description">A Discord bot made to do general moderation and management tasks.</p>
 					</div>
 				</a>
+				<a class="item inactive" href="https://github.com/SangeloDev/DefaultPlusPlus" rel="noopener noreferrer" target="_blank" tabindex="0">
+					<div class="thumbnail"><img src="assets/logos/not-found.svg" alt="No Project Logo" /></div>
+					<div class="item-details">
+						<h2>Default++</h2>
+						<p class="item-description">A BetterDiscord theme made to add support for userbg to another theme, which I don't remember anymore. I used this project to explore CSS' capabilities.</p>
+					</div>
+				</a>
 			</ul>
-
 			<p class="end-text">
 				<IconCobweb size="2em"/><br>
 				You've reached the end! There might be more projects coming soon 🤔...
 			</p>
 		</div>
-		<!-- Show modals -->
-		<Modal show={showModal} on:close={handleModalClose} contentComponent={selectedModule} />
 	</div>
 </content>
 
