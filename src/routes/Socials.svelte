@@ -177,7 +177,7 @@
 					</div>
 					<div class="tooltip">
 						<a
-							href="https://matrix.to/#/@sangelo:matrix.org"
+							href="https://matrix.to/#/@sangelo:stardust.foo"
 							target="_blank"
 							rel="noopener noreferrer"
 							tabindex="0"
@@ -186,7 +186,7 @@
 						>
 							<IconMatrix class="icon" size="2.5em" />
 						</a>
-						<span class="tooltiptext">@sangelo:matrix.org</span>
+						<span class="tooltiptext">@sangelo:stardust.foo</span>
 					</div>
 					<div class="tooltip">
 						<a
