@@ -5,6 +5,9 @@
 	}
 
     h2.modal-title {
+		display: flex;
+		gap: 0.25em;
+		align-items: center;
         margin-top: 1em;
     }
 
