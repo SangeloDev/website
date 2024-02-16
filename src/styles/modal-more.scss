@@ -125,7 +125,10 @@
 }
 
 .end-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5em;
     margin: 4% auto 0 auto;
     color: $star-gray;
-    text-align: center;
 }

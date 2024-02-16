@@ -123,10 +123,10 @@
 					</div>
 				</a>
 			</ul>
-			<p class="end-text">
-				<IconCobweb size="2em"/><br>
+			<div class="end-text">
+				<IconCobweb size="2em"/>
 				You've reached the end! There might be more projects coming soon 🤔...
-			</p>
+			</div>
 		</div>
 	</div>
 </content>
