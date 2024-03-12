@@ -1,11 +1,5 @@
 <script lang="ts">
-	import Modal from '../Modal.svelte';
-	import DashinitModal from './dashinit.svelte';
-	import SangeFaultModal from './sangefault.svelte';
-	import ExploreCraftModal from './explorecraft.svelte';
-	import UtilityClientModal from './utilityclient.svelte';
-	import SangeloSpaceModal from './sangelospace.svelte'
-
+	
 	import IconCobweb from 'svelte-material-icons/SpiderWeb.svelte';
 	import IconArchive from 'svelte-material-icons/ArchiveOutline.svelte';
 
@@ -132,7 +126,7 @@
 </content>
 
 <style lang="scss">
-	@import '../../styles/modal.scss';
-	@import '../../styles/mobile/modal-mobile.scss';
-	@import '../../styles/modal-more.scss';
+	@import '$styles/modal.scss';
+	@import '$styles/mobile/modal-mobile.scss';
+	@import '$styles/modal-more.scss';
 </style>

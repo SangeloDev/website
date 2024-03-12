@@ -1,6 +1,6 @@
 <script>
 	import '../app.scss';
-	import Navbar from './Navbar.svelte';
+	import Navbar from '$lib/components/Navbar.svelte';
 
 	import { fly } from 'svelte/transition';
 	export let data;

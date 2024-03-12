@@ -1,15 +1,17 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
-	import Modal from './Modal.svelte';
-	import DashinitModal from './modals/dashinit.svelte';
-	import SangeFaultModal from './modals/sangefault.svelte';
-	import ExploreCraftModal from './modals/explorecraft.svelte';
-	import UtilityClientModal from './modals/utilityclient.svelte';
-	import SangeloSpaceModal from './modals/sangelospace.svelte';
-	import LunivityModal from './modals/lunivity.svelte';
-	import MoreProjectsModal from './modals/more.svelte';
-	// import type { SvelteComponent } from 'svelte';
 
+	import { smoothScrollTo, handleKeydown } from '$lib/index';
+	
+	// Modal
+	import Modal from '$lib/components/Modal.svelte';
+	import DashinitModal from '$lib/modals/dashinit.svelte';
+	import SangeFaultModal from '$lib/modals/sangefault.svelte';
+	import ExploreCraftModal from '$lib/modals/explorecraft.svelte';
+	import UtilityClientModal from '$lib/modals/utilityclient.svelte';
+	import SangeloSpaceModal from '$lib/modals/sangelospace.svelte';
+	import LunivityModal from '$lib/modals/lunivity.svelte';
+	import MoreProjectsModal from '$lib/modals/more.svelte';
+	
 	let showModal = false;
 	let selectedModule: any = null;
 
@@ -22,27 +24,6 @@
 		showModal = false;
 	}
 
-
-	function smoothScrollTo(elementId: string) {
-		const element = document.getElementById(elementId);
-		if (element) {
-			element.scrollIntoView({
-				behavior: 'smooth'
-			});
-		}
-	}
-
-	function redirectToHome() {
-		// goto('/');
-		smoothScrollTo('home');
-	}
-
-	function handleKeydown(event: KeyboardEvent) {
-		// Trigger redirection on Enter key or Space bar
-		if (event.key === 'Enter' || event.key === ' ') {
-			redirectToHome();
-		}
-	}
 </script>
 
 <div id="projects" class="section">
@@ -56,7 +37,7 @@
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 			tabindex="0"
-			on:click={redirectToHome}
+			on:click={() => smoothScrollTo('home')}
 			on:keydown={handleKeydown}
 		>
 			<mask
@@ -119,5 +100,5 @@
 </div>
 
 <style lang="scss">
-	@import '../styles/projects.scss';
+	@import '$styles/projects.scss';
 </style>

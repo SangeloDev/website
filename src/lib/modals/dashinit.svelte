@@ -37,6 +37,6 @@
 </content>
 
 <style lang="scss">
-	@import '../../styles/modal.scss';
-	@import '../../styles/mobile/modal-mobile.scss';
+	@import '$styles/modal.scss';
+	@import '$styles/mobile/modal-mobile.scss';
 </style>

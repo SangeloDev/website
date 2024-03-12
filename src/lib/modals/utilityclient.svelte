@@ -1,8 +1,8 @@
 <script>
 	import IconOpenInNew from 'svelte-material-icons/OpenInNew.svelte';
-    let projectLogo = "assets/logos/explorecraft.svg";
-    let projectReadme = "https://gitpot.dev/ExploreCraft/website/raw/branch/main/README.md";
-    let projectSite = "https://explorecraft.net";
+    let projectLogo = "assets/logos/utilityclient.svg";
+    let projectReadme = "https://raw.githubusercontent.com/Utility-Client/UtilityClient/development/README.md";
+    let projectSite = "https://uc.gamingcraft.de";
 </script>
 
 <content>
@@ -37,6 +37,6 @@
 </content>
 
 <style lang="scss">
-	@import '../../styles/modal.scss';
-	@import '../../styles/mobile/modal-mobile.scss';
+	@import '$styles/modal.scss';
+	@import '$styles/mobile/modal-mobile.scss';
 </style>

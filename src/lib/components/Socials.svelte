@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { goto } from '$app/navigation';
+    import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
+	import { smoothScrollTo, handleKeydown, openWebsite } from '$lib/index';
+	import { emojis } from '$lib/emojis';
 
 	// Icons
 	import IconDiscord from 'svelte-material-icons/Discord.svelte';
@@ -14,93 +15,27 @@
 	import IconMastodon from 'svelte-material-icons/Mastodon.svelte';
 	import IconSteam from 'svelte-material-icons/Steam.svelte';
 
-	// Initialisations
-
 	let showMore = false;
-
-	const emojis = [
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ❤️',
-		'with ☕️',
-		'with 🍵',
-		'with 🍪',
-		'with 💤',
-		'on a 💻',
-		'in 🏫',
-		'at 🏠',
-		'with passion',
-		'with <img src="/assets/emojis/vscodium.png" alt="VSCodium" style="height: 18px;"/>',
-		'with <img src="/assets/emojis/stackoverflow.png" alt="StackOverflow" style="height: 18px;"/>',
-		'with <img src="/assets/emojis/svelte.png" alt="Svelte" style="height: 18px;" />'
-	];
-
 	let emoji = '';
 
-	// Functions
-
-	function changeEmoji() {
+	export function changeEmoji() {
 		emoji = emojis[Math.floor(Math.random() * emojis.length)];
 	}
 
-	function toggleShowMore() {
+	export function toggleShowMore() {
 		showMore = !showMore;
 	}
 
-	onMount(() => {
-		changeEmoji();
-	});
-
-	function smoothScrollTo(elementId: string) {
-		const element = document.getElementById(elementId);
-		if (element) {
-			element.scrollIntoView({
-				behavior: 'smooth'
-			});
-		}
-	}
-
-	function redirectToHome() {
-		// goto('/');
-		smoothScrollTo('home');
-	}
-
-	function handleKeydownHome(event: KeyboardEvent) {
-		// Trigger redirection on Enter key or Space bar
-		if (event.key === 'Enter' || event.key === ' ') {
-			redirectToHome();
-		}
-	}
-
-	function handleKeydownToggleMore(event: KeyboardEvent) {
+	export function handleKeydownToggleMore(event: KeyboardEvent) {
 		// Trigger redirection on Enter key or Space bar
 		if (event.key === 'Enter' || event.key === ' ') {
 			toggleShowMore();
 		}
 	}
 
-	function openWebsite(url: string) {
-		goto(url);
-	}
+	onMount(() => {
+        changeEmoji();
+    });
 </script>
 
 <div id="socials" class="section">
@@ -299,8 +234,8 @@
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 			tabindex="0"
-			on:click={redirectToHome}
-			on:keydown={handleKeydownHome}
+			on:click={() => smoothScrollTo('home')}
+			on:keydown={handleKeydown}
 		>
 			<mask
 				id="mask0_1404_2"
@@ -336,5 +271,5 @@
 </div>
 
 <style lang="scss">
-	@import '../styles/socials.scss';
+	@import '$styles/socials.scss';
 </style>

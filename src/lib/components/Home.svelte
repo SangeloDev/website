@@ -1,32 +1,6 @@
 <script lang='ts'>
-    import { goto } from '$app/navigation';
-
     import IconChevronDown from 'svelte-material-icons/ChevronDown.svelte';
-
-    function smoothScrollTo(elementId: string) {
-		const element = document.getElementById(elementId);
-		if (element) {
-			element.scrollIntoView({
-				behavior: 'smooth'
-			});
-		}
-	}
-
-	function redirectToHome() {
-		// goto('/');
-		smoothScrollTo('home');
-	}
-
-	function handleKeydown(event: KeyboardEvent) {
-		// Trigger redirection on Enter key or Space bar
-		if (event.key === 'Enter' || event.key === ' ') {
-			redirectToHome();
-		}
-	}
-
-	function openWebsite(url: string) {
-		goto(url);
-	}
+    import { smoothScrollTo, handleKeydown } from '$lib/index';
 </script>
 
 <div id="home" class="section">
@@ -80,6 +54,6 @@
 </div>
 
 <style lang="scss">
-    @import '../styles/index.scss';
-	@import '../styles/home.scss';
+    @import '$styles/index.scss';
+	@import '$styles/home.scss';
 </style>

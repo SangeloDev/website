@@ -1,8 +1,8 @@
 <script>
 	import IconOpenInNew from 'svelte-material-icons/OpenInNew.svelte';
-    let projectLogo = "assets/logos/sangelo.svg";
-    let projectReadme = "https://gitpot.dev/sangelo/website/raw/branch/main/README.md";
-    let projectSite = "https://gitpot.dev/sangelo/website";
+    let projectLogo = "assets/logos/sangefault.svg";
+    let projectReadme = "https://gitpot.dev/sangelo/SangeFault/raw/branch/1.8.9/README.md";
+    let projectSite = "https://github.com/SangeloDev/SangeFault";
 </script>
 
 <content>
@@ -37,6 +37,6 @@
 </content>
 
 <style lang="scss">
-	@import '../../styles/modal.scss';
-	@import '../../styles/mobile/modal-mobile.scss';
+	@import '$styles/modal.scss';
+	@import '$styles/mobile/modal-mobile.scss';
 </style>

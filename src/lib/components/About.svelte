@@ -1,30 +1,5 @@
 <script lang="ts">
-    import { goto } from '$app/navigation';
-
-    function smoothScrollTo(elementId: string) {
-		const element = document.getElementById(elementId);
-		if (element) {
-			element.scrollIntoView({
-				behavior: 'smooth'
-			});
-		}
-	}
-
-	function redirectToHome() {
-		// goto('/');
-		smoothScrollTo('home');
-	}
-
-	function handleKeydown(event: KeyboardEvent) {
-		// Trigger redirection on Enter key or Space bar
-		if (event.key === 'Enter' || event.key === ' ') {
-			redirectToHome();
-		}
-	}
-
-	function openWebsite(url: string) {
-		goto(url);
-	}
+    import { smoothScrollTo, handleKeydown } from '$lib/index';
 </script>
 
 <div id="about" class="section">
@@ -38,7 +13,7 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             tabindex="0"
-            on:click={redirectToHome}
+            on:click={() => smoothScrollTo('home')}
             on:keydown={handleKeydown}
         >
             <mask
@@ -79,5 +54,5 @@
 </div>
 
 <style lang="scss">
-    @import '../styles/about.scss';
+    @import '$styles/about.scss';
 </style>

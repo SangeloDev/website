@@ -1,8 +1,8 @@
 <script>
 	import IconOpenInNew from 'svelte-material-icons/OpenInNew.svelte';
-    let projectLogo = "assets/logos/lunivity.svg";
-    let projectReadme = "https://gitpot.dev/lunivity/.profile/raw/branch/main/README.md";
-    let projectSite = "https://lunivity.com"
+    let projectLogo = "assets/logos/explorecraft.svg";
+    let projectReadme = "https://gitpot.dev/ExploreCraft/website/raw/branch/main/README.md";
+    let projectSite = "https://explorecraft.net";
 </script>
 
 <content>
@@ -37,6 +37,6 @@
 </content>
 
 <style lang="scss">
-	@import '../../styles/modal.scss';
-	@import '../../styles/mobile/modal-mobile.scss';
+	@import '$styles/modal.scss';
+	@import '$styles/mobile/modal-mobile.scss';
 </style>

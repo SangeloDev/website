@@ -1,9 +1,9 @@
 <script lang="ts">
 
-	import Home from './Home.svelte';
-	import About from './About.svelte';
-	import Projects from './Projects.svelte';
-	import Socials from './Socials.svelte';
+	import Home from '$lib/components/Home.svelte';
+	import About from '$lib/components/About.svelte';
+	import Projects from '$lib/components/Projects.svelte';
+	import Socials from '$lib/components/Socials.svelte';
 
 </script>
 
@@ -15,5 +15,5 @@
 </div>
 
 <style lang="scss">
-	@import '../styles/index.scss';
+	@import '$styles/index.scss';
 </style>
