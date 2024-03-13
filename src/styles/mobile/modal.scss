@@ -7,10 +7,13 @@
 			grid-column-gap: 0px;
 			grid-row-gap: 0px;
             overflow: scroll;
-            margin: 0 5% 15% 5%;
+            margin: 0;
+            padding: 1em;
 
             .content {
                 margin-top: 1em;
+                padding-bottom: 8em;
+                padding-right: 0em;
             }
             
             .gallery {
@@ -32,11 +35,12 @@
         }
 
         .button-container {
-            bottom: 7.5%;
+            bottom: 2%;
 
             &::before {
-                bottom: 5.9%;
-                width: 80%;
+                bottom: 0;
+                width: 100%;
+                left: 0;
             }
 
             button {

@@ -50,13 +50,13 @@
 		position: fixed;
 		left: 9%;
 		bottom: calc(10% - 0.96em);
-		height: calc(100% + 1em); // 1em higher than the button
+		height: calc(100% + 1em);
 		height: 15%;
 		width: 82%;
 		pointer-events: none;
 		background: linear-gradient(to top, $space-gray, transparent);
 		background: -webkit-linear-gradient(to top, $space-gray, transparent);
-		z-index: 1001; // Place it behind the button
+		z-index: 1001;
 	}
 
 	.item {
@@ -127,6 +127,7 @@
 .end-text {
 	display: flex;
 	flex-direction: column;
+	text-align: center;
 	align-items: center;
 	gap: 0.5em;
     margin: 4% auto 0 auto;

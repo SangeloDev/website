@@ -4,6 +4,7 @@
 	width: 100%;
 	scroll-snap-type: y mandatory;
 	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .section {
@@ -13,4 +14,5 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	overflow-x: scroll;
 }

@@ -10,6 +10,7 @@
 	import UtilityClientModal from '$lib/modals/utilityclient.svelte';
 	import SangeloSpaceModal from '$lib/modals/sangelospace.svelte';
 	import LunivityModal from '$lib/modals/lunivity.svelte';
+	import GitpotModal from '$lib/modals/gitpot.svelte';
 	import MoreProjectsModal from '$lib/modals/more.svelte';
 	
 	let showModal = false;
@@ -73,7 +74,7 @@
 					<button class="button lunivity" on:click={() => openModalWith(LunivityModal)} />
 				</div>
 				<div class="two">
-					<a href="https://gitpot.dev" rel="noopener noreferrer" target="_blank" tabindex="-1"><button class="button gitpot" /></a>
+					<button class="button gitpot" on:click={() => openModalWith(GitpotModal)} />
 					<button class="button dashinit" on:click={() => openModalWith(DashinitModal)} />
 					<button class="button explorecraft" on:click={() => openModalWith(ExploreCraftModal)} />
 					<button class="button utility" on:click={() => openModalWith(UtilityClientModal)} />

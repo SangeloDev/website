@@ -38,5 +38,5 @@
 
 <style lang="scss">
 	@import '$styles/modal.scss';
-	@import '$styles/mobile/modal-mobile.scss';
+	@import '$styles/mobile/modal.scss';
 </style>

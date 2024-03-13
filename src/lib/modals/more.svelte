@@ -6,14 +6,6 @@
 	let showModal = false;
 	let selectedModule: any = null;
 
-	function openModalWith(module: any) {
-		selectedModule = module;
-		showModal = true;
-	}
-
-	function handleModalClose() {
-		showModal = false;
-	}
 </script>
 
 <content>
@@ -26,7 +18,7 @@
 			<p class="modal-title">These are all of my projects, including the ones that didn't fit in the homepage. Take a look!</p>
 			<ul class="item-list">
 				<a class="item" href="https://gitpot.dev/sangelo/website" rel="noopener noreferrer" target="_blank" tabindex="0">
-					<div class="thumbnail"><img src="assets/logos/sangelo.svg" alt="Sangelo's Logo" /></div>
+					<div class="thumbnail"><img src="assets/logos/sangelos-space-website.svg" alt="Sangelo's Logo" /></div>
 					<div class="item-details">
 						<h2>Sangelo's Space</h2>
 						<p class="item-description">This website's repository and source code.</p>
@@ -40,7 +32,7 @@
 					</div>
 				</a>
 				<a class="item" href="https://gitpot.dev" rel="noopener noreferrer" target="_blank" tabindex="0">
-					<div class="thumbnail"><img src="assets/logos/gitpot.svg" alt="Gitpot Logo" /></div>
+					<div class="thumbnail"><img src="assets/logos/gitpot-color.svg" alt="Gitpot Logo" /></div>
 					<div class="item-details">
 						<h2>Gitpot</h2>
 						<p class="item-description">Code so sweet, bugs can't compete! A Forgejo-powered git forge which is part of the Lunivity Circle.</p>
@@ -113,7 +105,7 @@
 					<div class="thumbnail"><img src="assets/logos/not-found.svg" alt="No Project Logo" /></div>
 					<div class="item-details">
 						<h2>Default++</h2>
-						<p class="item-description">A BetterDiscord theme made to add support for userbg to another theme, which I don't remember anymore. I used this project to explore CSS' capabilities.</p>
+						<p class="item-description">A BetterDiscord theme made to add support for userbg to another theme, which I don't remember anymore.</p>
 					</div>
 				</a>
 			</ul>
@@ -127,6 +119,7 @@
 
 <style lang="scss">
 	@import '$styles/modal.scss';
-	@import '$styles/mobile/modal-mobile.scss';
+	@import '$styles/mobile/modal.scss';
 	@import '$styles/modal-more.scss';
+	@import '$styles/mobile/modal-more.scss';
 </style>
