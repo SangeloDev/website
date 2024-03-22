@@ -33,4 +33,6 @@ You can preview the production build with `yarn run preview`.
 
 ## License
 
-You can view this project's license [here](./LICENSE).
+You can view this project's source code license [here](./LICENSE).
+
+All assets created by me are Copyright (c) 2019-2024 Sangelo unless otherwise stated.
