@@ -64,7 +64,7 @@ publish image=default_image runner=default_runner:
     {{runner}} login gitpot.dev -u $GITPOT_USERNAME -p $GITPOT_PASSWORD
     @# push the specified image to the container registry
     {{runner}} push {{image}}
-    @echo -e "\e[1;32mPublished {{image}} successfuly! Use '{{runner}} pull {{image}}' to pull the container.\e[0m"
+    @echo "Published {{image}} successfuly! Use '{{runner}} pull {{image}}' to pull the container."
 
 # development
 
