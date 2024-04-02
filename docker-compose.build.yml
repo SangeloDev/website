@@ -1,7 +1,6 @@
-version: '3.8'
-
 services:
   web:
+    image: gitpot.dev/sangelo/website:${TAG}
     build:
       context: .
       dockerfile: Dockerfile
