@@ -36,7 +36,7 @@ clean runner=default_runner tag=default_tag:
 # clean images function
 _clean_images runner=default_runner:
     #!/usr/bin/env bash
-    set -euo pipefail
+    set -o pipefail
     image_ids=$({{runner}} image ls | grep gitpot.dev/sangelo/website | awk '{print $3}')
     if [ -n "$image_ids" ]; then
         for image_id in $image_ids; do
@@ -55,7 +55,7 @@ build tag=default_tag runner=default_runner:
 # run container image with specified runner (default runner: docker)
 run tag=default_tag runner=default_runner:
     @echo "Running with '{{runner}}'..."
-    {{runner}} compose -f docker-compose.build.yml up -d --force-recreate
+    TAG={{tag}} {{runner}} compose -f docker-compose.build.yml up -d --force-recreate
     @# watch -n 1 {{runner}} compose -f docker-compose.build.yml ps
 
 publish image=default_image runner=default_runner:

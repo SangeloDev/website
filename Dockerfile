@@ -10,8 +10,6 @@ COPY . .
 # Install dependencies and build the site. Output directory will be /app/build
 RUN yarn install && yarn run build
 
-# No need to move /app/build here
-
 # Final stage
 FROM caddy:2-alpine
 
@@ -29,3 +27,6 @@ EXPOSE 80
 
 # Start Caddy with the specified Caddyfile
 CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
+
+# Remove intermediate images after build
+ONBUILD RUN rm -rf /app
