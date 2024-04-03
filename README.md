@@ -16,9 +16,6 @@ just
 
 # you can also run `just dev`
 just dev
-
-# to build and preview a webpage, run `just preview`
-just preview
 ```
 
 View a list of all possible `just` recipes with `just -l`.
@@ -40,27 +37,40 @@ Once you've made your changes, you can create a Pull Request and I'll make sure 
 
 ## Building
 
+### Build locally
+
 To create a production version of this website without docker:
 
 ```bash
+# automatically build & preview
+just preview
+
+# or, manually build
 yarn run build
 ```
+
+You can then preview the production build locally with `yarn run preview --open`.
+
+The files will be available in the repo, in the `build/` directory.
+
+### Build with Docker
 
 To build a docker container image with `just`:
 
 ```bash
-# build and run container image with docker
+# build and run container image with docker, tag: latest
 just build
 
 # build with podman
-just build podman
+just build <tag> podman
 
-# clean, build, and run container image with docker or podman
+# clean, build, and run container image with docker, tag: latest
 just all
-just all podman
+# clean, build, and run container image with podman, tag: dev
+just all dev podman
 ```
 
-You can preview the production build with `yarn run preview`.
+You can preview the produced docker build with `just run [tag] [runner]`.
 
 ## License
 
