@@ -9,6 +9,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/catthehacker/ubuntu:act-latest
     defaults:
       run:
         working-directory: /tmp
