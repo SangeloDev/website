@@ -34,11 +34,10 @@ jobs:
           export TAG=$(echo "${{ github.ref }}" | sed 's/refs\/tags\///')
           # build the container
           just -f /workspace/sangelo/website/Justfile build "${TAG}"
-          echo "$TAG"
 
       - name: 🐳 Publish Container
         run: |
-          echo "$TAG"
+          export TAG=$(echo "${{ github.ref }}" | sed 's/refs\/tags\///')
           echo "${{ secrets.PUBLISH_TOKEN }}" | docker login gitpot.dev -u sangelo --password-stdin
           docker push "gitpot.dev/sangelo/website:${TAG}"
 
