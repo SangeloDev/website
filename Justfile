@@ -82,3 +82,7 @@ preview: _install
     @echo "Running vite preview server..."
     yarn run build
     yarn run preview --open
+
+upgrade-interactive: _install
+    @echo "Interactively upgrading packages..."
+    yarn upgrade-interactive --latest
