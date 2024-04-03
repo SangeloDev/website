@@ -1,0 +1,14 @@
+services:
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  website:
+    image: gitpot.dev/sangelo/website:latest
+    container_name: website
+    restart: unless-stopped
+    ports:
+      - "3000:80"
