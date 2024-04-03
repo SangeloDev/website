@@ -1,0 +1,41 @@
+name: Build and push docker image
+
+# start workflow every time a tag/release is created
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: /repo
+
+    # build the docker container
+    steps:
+      - name: ✨ Installing just command runner
+        run: |
+          # download and extract just to /bin/just
+          curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /bin
+          just --help || echo "Error: 'just' wasn't found. Maybe the download failed?"
+
+      - name: ⬇️ Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🐋 Build Container
+        run: |
+          # build the container
+          just build ${{ github.ref }}
+
+      - name: 🐳 Publish Container
+        run: |
+          echo "${{ secrets.PUBLISH_TOKEN }}" | docker login gitpot.dev -u sangelo --password-stdin
+          docker push gitpot.dev/sangelo/website:${{ github.ref }}
+
+          # publish tag latest as well
+          if [[ "${{ github.ref }}" == "refs/tags/"* ]]; then
+            docker tag gitpot.dev/sangelo/website:${{ github.ref }} gitpot.dev/sangelo/website:latest
+            docker push gitpot.dev/sangelo/website:latest
+          fi
