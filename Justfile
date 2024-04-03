@@ -61,7 +61,7 @@ run tag=default_tag runner=default_runner:
 publish image=default_image runner=default_runner:
     @echo "Publishing with '{{runner}}'..."
     @# log into gitpot
-    {{runner}} login gitpot.dev -u $GITPOT_USERNAME -p $GITPOT_PASSWORD
+    echo "$GITPOT_TOKEN" | {{runner}} login gitpot.dev -u $GITPOT_USERNAME --password-stdin
     @# push the specified image to the container registry
     {{runner}} push {{image}}
     @echo "Published {{image}} successfuly! Use '{{runner}} pull {{image}}' to pull the container."
