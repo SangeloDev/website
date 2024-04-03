@@ -28,5 +28,8 @@ EXPOSE 80
 # Start Caddy with the specified Caddyfile
 CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
 
+# Description for docker container
+LABEL description="Sangelo's Space website, packaged as a docker container, with the Caddy webserver."
+
 # Remove intermediate images after build
 ONBUILD RUN rm -rf /app
