@@ -139,11 +139,12 @@
 			opacity: 0;
 			transition: opacity ease-in-out 0.1s;
 		}
-
+		
 		.tooltiptext {
 			z-index: 1001;
 			user-select: none;
 			cursor: default;
+			width: max-content;
 		}
 
 		.tooltip:hover .tooltiptext {
