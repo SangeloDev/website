@@ -5,7 +5,7 @@ Feel free to explore!
 
 ## Contributing
 
-You're welcome to contribute to this website if you have a Lunivity account (see homepage for details if registrations aren't open).<br>
+You're welcome to contribute to this website if you have a Lunivity account (see Gitpot's homepage for details if registrations aren't open).<br>
 Once you fork and clone the repository, follow the next steps.
 
 If you have [`just`](https://github.com/casey/just/) installed, setting up is pretty easy:
