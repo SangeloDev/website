@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/catthehacker/ubuntu:act-latest
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
     defaults:
       run:
         working-directory: /tmp
