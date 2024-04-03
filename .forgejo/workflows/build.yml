@@ -42,7 +42,7 @@ jobs:
           docker push "gitpot.dev/sangelo/website:${TAG}"
 
           # publish tag latest as well
-          if [[ "${{ github.ref }}" == "refs/tags/"* ]]; then
+          if echo "${{ github.ref }}" | grep -q "refs/tags/"; then
             docker tag "gitpot.dev/sangelo/website:${TAG}" "gitpot.dev/sangelo/website:latest"
             docker push "gitpot.dev/sangelo/website:latest"
           fi
