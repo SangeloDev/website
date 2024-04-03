@@ -31,7 +31,7 @@ jobs:
       - name: 🐋 Build Container
         run: |
           # extract tag name without the prefix
-          TAG=$(echo "${{ github.ref }}" | sed 's/refs\/tags\///')
+          export TAG=$(echo "${{ github.ref }}" | sed 's/refs\/tags\///')
           # build the container
           just -f /workspace/sangelo/website/Justfile build "${TAG}"
 
