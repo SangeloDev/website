@@ -27,7 +27,7 @@ jobs:
       - name: 🐋 Build Container
         run: |
           # build the container
-          just build ${{ github.ref }}
+          just -f /workspace/sangelo/website/Justfile build ${{ github.ref }}
 
       - name: 🐳 Publish Container
         run: |
