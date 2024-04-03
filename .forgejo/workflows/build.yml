@@ -1,0 +1,48 @@
+name: Build and push docker image
+
+# start workflow every time a tag/release is created
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/catthehacker/ubuntu:act-latest
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+    defaults:
+      run:
+        working-directory: /tmp
+
+    # build the docker container
+    steps:
+      - name: ✨ Installing just command runner
+        run: |
+          # download and extract just to /bin/just
+          curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /bin
+          just --help || echo "Error: 'just' wasn't found. Maybe the download failed?"
+
+      - name: ⬇️ Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🐋 Build Container
+        run: |
+          # extract tag name without the prefix
+          export TAG=$(echo "${{ github.ref }}" | sed 's/refs\/tags\///')
+          # build the container
+          just -f /workspace/sangelo/website/Justfile build "${TAG}"
+
+      - name: 🐳 Publish Container
+        run: |
+          export TAG=$(echo "${{ github.ref }}" | sed 's/refs\/tags\///')
+          echo "${{ secrets.PUBLISH_TOKEN }}" | docker login gitpot.dev -u sangelo --password-stdin
+          docker push "gitpot.dev/sangelo/website:${TAG}"
+
+          # publish tag latest as well
+          if echo "${{ github.ref }}" | grep -q "refs/tags/"; then
+            docker tag "gitpot.dev/sangelo/website:${TAG}" "gitpot.dev/sangelo/website:latest"
+            docker push "gitpot.dev/sangelo/website:latest"
+          fi

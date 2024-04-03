@@ -8,6 +8,20 @@ Feel free to explore!
 You're welcome to contribute to this website if you have a Lunivity account (see homepage for details if registrations aren't open).<br>
 Once you fork and clone the repository, follow the next steps.
 
+If you have `just` installed, setting up is pretty easy:
+
+```bash
+# setup dependencies and run dev server
+just
+
+# you can also run `just dev`
+just dev
+```
+
+View a list of all possible `just` recipes with `just -l`.
+
+Otherwise, if you don't already have or don't want to install `just`, you can run the commands manually:
+
 ```bash
 # install dependencies
 yarn install
@@ -23,14 +37,44 @@ Once you've made your changes, you can create a Pull Request and I'll make sure 
 
 ## Building
 
-To create a production version of this website:
+### Build locally
+
+To create a production version of this website without docker:
 
 ```bash
+# automatically build & preview
+just preview
+
+# or, manually build
 yarn run build
 ```
 
-You can preview the production build with `yarn run preview`.
+You can then preview the production build locally with `yarn run preview --open`.
+
+The files will be available in the repo, in the `build/` directory.
+
+### Build with Docker
+
+To build a docker container image with `just`:
+
+```bash
+# build and run container image with docker, tag: latest
+just build
+
+# build with podman
+just build <tag> podman
+
+# clean, build, and run container image with docker, tag: latest
+just all
+# clean, build, and run container image with podman, tag: dev
+just all dev podman
+```
+
+You can preview the produced docker build with `just run [tag] [runner]`.
 
 ## License
 
-You can view this project's license [here](./LICENSE).
+You can view this project's source code license [here](./LICENSE).
+
+All assets (images, logos, etc.) created by me (Sangelo) are Copyright (c) 2019-2024 Sangelo unless otherwise stated.<br>
+Brand logos and icons (such as Discord, Github, YouTube, etc.) are trademarked by and copyright of their respective owners.
