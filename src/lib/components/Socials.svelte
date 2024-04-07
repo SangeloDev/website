@@ -45,7 +45,7 @@
 				<a
 					href="https://discord.com/users/373525255102136341"
 					target="_blank"
-					rel="noopener noreferrer"
+					rel="noopener noreferrer me"
 					tabindex="0"
 					class="round-button button discord"
 					aria-label="Discord"
@@ -58,7 +58,7 @@
 				<a
 					href="https://youtube.com/@Sangeloo"
 					target="_blank"
-					rel="noopener noreferrer"
+					rel="noopener noreferrer me"
 					tabindex="0"
 					class="round-button button youtube"
 					aria-label="YouTube"
@@ -71,7 +71,7 @@
 				<a
 					href="https://github.com/SangeloDev"
 					target="_blank"
-					rel="noopener noreferrer"
+					rel="noopener noreferrer me"
 					tabindex="0"
 					class="round-button button github"
 					aria-label="GitHub"
@@ -84,7 +84,7 @@
 				<a
 					href="mailto:contact@sangelo.space"
 					target="_blank"
-					rel="noopener noreferrer"
+					rel="noopener noreferrer me"
 					tabindex="0"
 					class="round-button button email"
 					aria-label="Email"
@@ -101,7 +101,7 @@
 						<a
 							href="https://steamcommunity.com/id/sangeloo"
 							target="_blank"
-							rel="noopener noreferrer"
+							rel="noopener noreferrer me"
 							tabindex="0"
 							class="round-button button steam"
 							aria-label="Steam"
@@ -114,7 +114,7 @@
 						<a
 							href="https://matrix.to/#/@sangelo:stardust.foo"
 							target="_blank"
-							rel="noopener noreferrer"
+							rel="noopener noreferrer me"
 							tabindex="0"
 							class="round-button button matrix"
 							aria-label="Matrix"
@@ -125,9 +125,9 @@
 					</div>
 					<div class="tooltip">
 						<a
-							href="https://gitpot.dev/Sangelo"
+							href="https://gitpot.dev/sangelo"
 							target="_blank"
-							rel="noopener noreferrer"
+							rel="noopener noreferrer me"
 							tabindex="0"
 							class="round-button button gitpot"
 							aria-label="Gitpot"
@@ -197,7 +197,7 @@
 						<a
 							href="https://mas.to/@sangelo"
 							target="_blank"
-							rel="noopener noreferrer"
+							rel="noopener noreferrer me"
 							tabindex="0"
 							class="round-button button mastodon"
 							aria-label="Mastodon"
