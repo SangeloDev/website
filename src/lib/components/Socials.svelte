@@ -125,7 +125,7 @@
 					</div>
 					<div class="tooltip">
 						<a
-							href="https://gitpot.dev/sangelo"
+							href="https://gitpot.org/sangelo"
 							target="_blank"
 							rel="noopener noreferrer me"
 							tabindex="0"

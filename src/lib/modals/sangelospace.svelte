@@ -1,8 +1,8 @@
 <script>
 	import IconOpenInNew from 'svelte-material-icons/OpenInNew.svelte';
     let projectLogo = "assets/logos/sangelos-space-website.svg";
-    let projectReadme = "https://gitpot.dev/sangelo/website/raw/branch/main/README.md";
-    let projectSite = "https://gitpot.dev/sangelo/website";
+    let projectReadme = "https://gitpot.org/sangelo/website/raw/branch/main/README.md";
+    let projectSite = "https://gitpot.org/sangelo/website";
 </script>
 
 <content>

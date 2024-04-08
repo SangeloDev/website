@@ -1,6 +1,6 @@
 services:
   web:
-    image: gitpot.dev/sangelo/website:${TAG}
+    image: gitpot.org/sangelo/website:${TAG}
     build:
       context: .
       dockerfile: Dockerfile

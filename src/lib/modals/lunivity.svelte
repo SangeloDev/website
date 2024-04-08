@@ -1,7 +1,7 @@
 <script>
 	import IconOpenInNew from 'svelte-material-icons/OpenInNew.svelte';
     let projectLogo = "assets/logos/lunivity.svg";
-    let projectReadme = "https://gitpot.dev/lunivity/.profile/raw/branch/main/README.md";
+    let projectReadme = "https://gitpot.org/lunivity/.profile/raw/branch/main/README.md";
     let projectSite = "https://lunivity.com"
 </script>
 

@@ -1,8 +1,8 @@
 <script>
 	import IconOpenInNew from 'svelte-material-icons/OpenInNew.svelte';
     let projectLogo = "assets/logos/dashinit.svg";
-    let projectReadme = "https://gitpot.dev/dashinit/cli/raw/branch/main/README.md";
-    let projectSite = "https://gitpot.dev/dashinit/cli";
+    let projectReadme = "https://gitpot.org/dashinit/cli/raw/branch/main/README.md";
+    let projectSite = "https://gitpot.org/dashinit/cli";
 </script>
 
 <content>

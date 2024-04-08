@@ -1,8 +1,8 @@
 <script>
 	import IconOpenInNew from 'svelte-material-icons/OpenInNew.svelte';
     let projectLogo = "assets/logos/gitpot-color.svg";
-    let projectReadme = "https://gitpot.dev/gitpot/.profile/raw/branch/main/README.md";
-    let projectSite = "https://gitpot.dev"
+    let projectReadme = "https://gitpot.org/gitpot/.profile/raw/branch/main/README.md";
+    let projectSite = "https://gitpot.org"
 </script>
 
 <content>

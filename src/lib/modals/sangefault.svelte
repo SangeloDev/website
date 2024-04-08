@@ -1,7 +1,7 @@
 <script>
 	import IconOpenInNew from 'svelte-material-icons/OpenInNew.svelte';
     let projectLogo = "assets/logos/sangefault.svg";
-    let projectReadme = "https://gitpot.dev/sangelo/SangeFault/raw/branch/1.8.9/README.md";
+    let projectReadme = "https://gitpot.org/sangelo/SangeFault/raw/branch/1.8.9/README.md";
     let projectSite = "https://github.com/SangeloDev/SangeFault";
 </script>
 

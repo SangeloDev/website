@@ -38,11 +38,11 @@ jobs:
       - name: 🐳 Publish Container
         run: |
           export TAG=$(echo "${{ github.ref }}" | sed 's/refs\/tags\///')
-          echo "${{ secrets.PUBLISH_TOKEN }}" | docker login gitpot.dev -u sangelo --password-stdin
-          docker push "gitpot.dev/sangelo/website:${TAG}"
+          echo "${{ secrets.PUBLISH_TOKEN }}" | docker login gitpot.org -u sangelo --password-stdin
+          docker push "gitpot.org/sangelo/website:${TAG}"
 
           # publish tag latest as well
           if echo "${{ github.ref }}" | grep -q "refs/tags/"; then
-            docker tag "gitpot.dev/sangelo/website:${TAG}" "gitpot.dev/sangelo/website:latest"
-            docker push "gitpot.dev/sangelo/website:latest"
+            docker tag "gitpot.org/sangelo/website:${TAG}" "gitpot.org/sangelo/website:latest"
+            docker push "gitpot.org/sangelo/website:latest"
           fi

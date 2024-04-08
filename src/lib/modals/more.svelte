@@ -17,7 +17,7 @@
 			<h1 class="modal-title no-select">All Projects</h1>
 			<p class="modal-title">These are all of my projects, including the ones that didn't fit in the homepage. Take a look!</p>
 			<ul class="item-list">
-				<a class="item" href="https://gitpot.dev/sangelo/website" rel="noopener noreferrer" target="_blank" tabindex="0">
+				<a class="item" href="https://gitpot.org/sangelo/website" rel="noopener noreferrer" target="_blank" tabindex="0">
 					<div class="thumbnail"><img src="assets/logos/sangelos-space-website.svg" alt="Sangelo's Logo" /></div>
 					<div class="item-details">
 						<h2>Sangelo's Space</h2>
@@ -31,14 +31,14 @@
 						<p class="item-description">Open-source by nature, self-hosted by choice. Self-hosted cloud services.</p>
 					</div>
 				</a>
-				<a class="item" href="https://gitpot.dev" rel="noopener noreferrer" target="_blank" tabindex="0">
+				<a class="item" href="https://gitpot.org" rel="noopener noreferrer" target="_blank" tabindex="0">
 					<div class="thumbnail"><img src="assets/logos/gitpot-color.svg" alt="Gitpot Logo" /></div>
 					<div class="item-details">
 						<h2>Gitpot</h2>
 						<p class="item-description">Code so sweet, bugs can't compete! A Forgejo-powered git forge which is part of the Lunivity Circle.</p>
 					</div>
 				</a>
-				<a class="item" href="https://gitpot.dev/dashinit/cli" rel="noopener noreferrer" target="_blank" tabindex="0">
+				<a class="item" href="https://gitpot.org/dashinit/cli" rel="noopener noreferrer" target="_blank" tabindex="0">
 					<div class="thumbnail"><img src="assets/logos/dashinit.svg" alt="dashinit Logo" /></div>
 					<div class="item-details">
 						<h2>dashinit</h2>

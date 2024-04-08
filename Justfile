@@ -4,7 +4,7 @@ set dotenv-load
 # defaults
 default_runner := 'docker'
 default_tag := 'latest'
-default_image := 'gitpot.dev/sangelo/website:latest'
+default_image := 'gitpot.org/sangelo/website:latest'
 
 # run development server by default
 default: dev
@@ -37,7 +37,7 @@ clean runner=default_runner tag=default_tag:
 _clean_images runner=default_runner:
     #!/usr/bin/env bash
     set -o pipefail
-    image_ids=$({{runner}} image ls | grep gitpot.dev/sangelo/website | awk '{print $3}')
+    image_ids=$({{runner}} image ls | grep gitpot.org/sangelo/website | awk '{print $3}')
     if [ -n "$image_ids" ]; then
         for image_id in $image_ids; do
             {{runner}} image rm $image_id
@@ -61,7 +61,7 @@ run tag=default_tag runner=default_runner:
 publish image=default_image runner=default_runner:
     @echo "Publishing with '{{runner}}'..."
     @# log into gitpot
-    echo "$GITPOT_TOKEN" | {{runner}} login gitpot.dev -u $GITPOT_USERNAME --password-stdin
+    echo "$GITPOT_TOKEN" | {{runner}} login gitpot.org -u $GITPOT_USERNAME --password-stdin
     @# push the specified image to the container registry
     {{runner}} push {{image}}
     @echo "Published {{image}} successfuly! Use '{{runner}} pull {{image}}' to pull the container."

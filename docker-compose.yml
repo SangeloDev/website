@@ -7,7 +7,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
   website:
-    image: gitpot.dev/sangelo/website:latest
+    image: gitpot.org/sangelo/website:latest
     container_name: website
     restart: unless-stopped
     ports:
