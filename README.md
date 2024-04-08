@@ -1,4 +1,4 @@
-<div align="center"> <img src="https://gitpot.org/sangelo/website/raw/branch/main/static/assets/logos/sangelos-space-website.svg"/ width=11% style="border-radius:100%;"> </div>
+<div align="center"> <img src="https://gitpot.org/sangelo/website/raw/branch/main/static/assets/img/sangelos-space-readme.png"/ width=11%> </div>
 
 # Sangelo's Space
 
