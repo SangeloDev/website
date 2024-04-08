@@ -1,3 +1,5 @@
+<div align="center"> <img src="https://gitpot.org/sangelo/website/raw/branch/main/static/assets/logos/sangelos-space-website.svg"/ width=11% style="border-radius:100%;"> </div>
+
 # Sangelo's Space
 
 This is the source-code for my website, written in Svelte & SCSS.<br>
