@@ -32,10 +32,10 @@ CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile
 LABEL org.opencontainers.image.title="Sangelo's Space"
 LABEL org.opencontainers.image.description="Sangelo's Space website, packaged as a docker container, with the Caddy webserver."
 LABEL org.opencontainers.image.url="https://sangelo.space"
-LABEL org.opencontainers.image.documentation="https://git.org/sangelo/appsite"
+LABEL org.opencontainers.image.documentation="https://gitpot.org/sangelo/website"
 LABEL org.opencontainers.image.vendor="Sangelo"
 LABEL org.opencontainers.image.licenses="GPL-v3"
-LABEL org.opencontainers.image.source="https://git.org/sangelo/appsite"
+LABEL org.opencontainers.image.source="https://gitpot.org/sangelo/website"
 
 # Remove intermediate images after build
 ONBUILD RUN rm -rf /git

@@ -83,6 +83,7 @@ preview: _install
     yarn run build
     yarn run preview --open
 
+# upgrade dependencies for the project interactively with yarn
 upgrade-interactive: _install
     @echo "Interactively upgrading packages..."
     yarn upgrade-interactive --latest
