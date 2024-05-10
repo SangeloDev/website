@@ -7,3 +7,5 @@ services:
       no_cache: true
     ports:
       - "3000:80"
+      - "3080:8080"
+
