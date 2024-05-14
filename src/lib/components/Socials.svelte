@@ -195,7 +195,7 @@
 					</div>
 					<div class="tooltip">
 						<a
-							href="https://mas.to/@sangelo"
+							href="https://chaos.social/@sangelo"
 							target="_blank"
 							rel="noopener noreferrer me"
 							tabindex="0"
@@ -204,7 +204,7 @@
 						>
 							<IconMastodon class="icon" size="2.5em" />
 						</a>
-						<span class="tooltiptext">@sangelo@mas.to</span>
+						<span class="tooltiptext">@sangelo@chaos.social</span>
 					</div>
 				</div>
 			{/if}
