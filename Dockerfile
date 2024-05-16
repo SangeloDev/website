@@ -19,13 +19,19 @@ WORKDIR /app
 # Copy the build directory from the builder stage to /app
 COPY --from=builder /git/build /app
 
+# Create a dedicated user 'web' and change ownership of /app to 'web'
+RUN addgroup -S web && adduser -S web -G web && chown -R web:web /app
+
 # Caddyfile configuration to serve files from /app
-RUN echo -e ":80 {\n  root * /app\n  try_files {path}.html {path}\n  file_server\n}" > /etc/caddy/Caddyfile
+RUN echo -e ":80 {\n  root * /app\n  try_files {path}.html {path}\n  file_server\n}\n:8080 {\n  respond /health \"OK\" 200\n}" > /etc/caddy/Caddyfile
 
 # Expose port 80
 EXPOSE 80
 
-# Start Caddy with the specified Caddyfile
+# Switch to the 'web' user
+USER web
+
+# Start Caddy with the specified Caddyfile as the 'web' user
 CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
 
 # Docker Container Labels

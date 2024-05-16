@@ -99,7 +99,7 @@
 				<div class="button-container below" transition:slide>
 					<div class="tooltip">
 						<a
-							href="https://steamcommunity.com/id/sangeloo"
+							href="https://steamcommunity.com/id/Sangelo"
 							target="_blank"
 							rel="noopener noreferrer me"
 							tabindex="0"
@@ -108,7 +108,7 @@
 						>
 							<IconSteam class="icon" size="2.5em" />
 						</a>
-						<span class="tooltiptext">@sangeloo</span>
+						<span class="tooltiptext">@Sangelo</span>
 					</div>
 					<div class="tooltip">
 						<a
@@ -195,7 +195,7 @@
 					</div>
 					<div class="tooltip">
 						<a
-							href="https://mas.to/@sangelo"
+							href="https://chaos.social/@sangelo"
 							target="_blank"
 							rel="noopener noreferrer me"
 							tabindex="0"
@@ -204,7 +204,7 @@
 						>
 							<IconMastodon class="icon" size="2.5em" />
 						</a>
-						<span class="tooltiptext">@sangelo@mas.to</span>
+						<span class="tooltiptext">@sangelo@chaos.social</span>
 					</div>
 				</div>
 			{/if}
