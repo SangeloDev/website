@@ -108,7 +108,7 @@
 						>
 							<IconSteam class="icon" size="2.5em" />
 						</a>
-						<span class="tooltiptext">@sangeloo</span>
+						<span class="tooltiptext">@Sangelo</span>
 					</div>
 					<div class="tooltip">
 						<a
