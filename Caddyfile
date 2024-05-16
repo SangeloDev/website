@@ -1,0 +1,26 @@
+:80 {
+	root * /app
+	try_files {path}.html {path}
+	file_server
+	handle_errors {
+		# handle 4xx errors
+		@4xx expression `{err.status_code} >= 400 && {err.status_code} < 500`
+		handle @4xx {
+			rewrite * /internal/error/400.html
+			templates
+			file_server
+		}
+
+		# handle 5xx errors
+		@5xx expression `{err.status_code} >= 500 && {err.status_code} < 600`
+		handle @5xx {
+			rewrite * /internal/error/500.html
+			templates
+			file_server
+		}
+	}
+}
+
+:8080 {
+	respond /health "OK" 200
+}
