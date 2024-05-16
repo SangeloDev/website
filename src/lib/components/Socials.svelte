@@ -99,7 +99,7 @@
 				<div class="button-container below" transition:slide>
 					<div class="tooltip">
 						<a
-							href="https://steamcommunity.com/id/sangeloo"
+							href="https://steamcommunity.com/id/Sangelo"
 							target="_blank"
 							rel="noopener noreferrer me"
 							tabindex="0"
