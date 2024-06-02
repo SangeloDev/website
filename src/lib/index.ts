@@ -26,3 +26,32 @@ export function handleKeydown(event: KeyboardEvent) {
 export function openWebsite(url: string) {
     goto(url);
 }
+
+export function helloWorld(type: string, msg: string) {
+    if (type == "ascii") {
+        console.log(`
+                                            :=*#%%#=
+                                         -+#@@@@@@@@@.
+                                     .=#@@@@@@@@@@@@+
+                                   =%@@@@@@@@@@@@%+.
+                                  +@@@@@@@@@@@%=:
+                                  +@@@@@@@@@@@%=.
+                                   =#@@@@@@@@@@@@#+:
+                                     .-*%@@@@@@@@@@@%*:
+                                         .-%@@@@@@@@@@@#.
+                                          :*@@@@@@@@@@@@=
+                                       -*%@@@@@@@@@@@@%+
+                                    =#@@@@@@@@@@@@@#+:
+                                  +@@@@@@@@@@@@%+-
+                                 =@@@@@@@@@@%=.
+                                 .#@@@@@@@@*
+                                   =%@@@@@%
+                                    :@@@@@#
+                                     %@@@@:
+                                     .*%#-
+
+        `)
+    }
+
+    console.log(msg)
+}

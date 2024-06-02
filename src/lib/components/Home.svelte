@@ -1,6 +1,8 @@
 <script lang='ts'>
     import IconChevronDown from 'svelte-material-icons/ChevronDown.svelte';
-    import { smoothScrollTo, handleKeydown } from '$lib/index';
+    import { smoothScrollTo, handleKeydown, helloWorld } from '$lib/index';
+
+    helloWorld("ascii", "hi there, curious one. have fun exploring! :D")
 </script>
 
 <div id="home" class="section">
