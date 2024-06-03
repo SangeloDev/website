@@ -28,7 +28,7 @@ jobs:
       - name: ⬇️ Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Update debug.json with Git info
+      - name: ⚙️ Update website debug info
         run: |
           export TAG=$(echo "${{ github.ref }}" | sed 's/refs\/tags\///')
           export SHA=$(echo "${{ github.sha }}")
