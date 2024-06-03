@@ -178,6 +178,28 @@
 			font-weight: 800;
 			margin-bottom: -0.7em;
 		}
+
+		.debug-ct {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 0;
+			margin: 1em 0 1em 0;
+		}
+
+		.debug-info {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin: 0;
+			padding: 0;
+			gap: 0.5em;
+
+			p, pre {
+				margin: 0;
+			}
+		}
 	}
 
 	@import './mobile/socials.scss';

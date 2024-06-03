@@ -28,6 +28,13 @@ jobs:
       - name: ⬇️ Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Update debug.json with Git info
+        run: |
+          git rev-parse HEAD > commit_hash
+          git describe --tags --abbrev=0 > tag
+          sed -i "s|\"commit\": \"\"|\"commit\": \"$(cat commit_hash)\"|" static/assets/debug.json
+          sed -i "s|\"tag\": \"\"|\"tag\": \"$(cat tag)\"|" static/assets/debug.json
+
       - name: 🐋 Build Container
         run: |
           # extract tag name without the prefix

@@ -1,8 +1,11 @@
 <script lang='ts'>
     import IconChevronDown from 'svelte-material-icons/ChevronDown.svelte';
     import { smoothScrollTo, handleKeydown, helloWorld } from '$lib/index';
+    import { onMount } from 'svelte';
 
-    helloWorld("ascii", "hi there, curious one. have fun exploring! :D")
+    onMount(() => {
+        helloWorld("ascii", "hi there, curious one. have fun exploring! :D")
+    });
 </script>
 
 <div id="home" class="section">
@@ -21,7 +24,7 @@
                     style="mask-type: alpha"
                     maskUnits="userSpaceOnUse"
                     x="27"
-                    y="0"
+                    y="0"t
                     width="90"
                     height="145"
                 >

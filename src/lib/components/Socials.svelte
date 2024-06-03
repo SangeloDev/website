@@ -15,8 +15,12 @@
 	import IconMastodon from 'svelte-material-icons/Mastodon.svelte';
 	import IconSteam from 'svelte-material-icons/Steam.svelte';
 
+	// Variables
 	let showMore = false;
 	let emoji = '';
+	let commitHash = '';
+	let gitTag = '';
+	let showDebugInfo = false;
 
 	export function changeEmoji() {
 		emoji = emojis[Math.floor(Math.random() * emojis.length)];
@@ -33,9 +37,25 @@
 		}
 	}
 
-	onMount(() => {
+	onMount(async () => {
+		const urlParams = new URLSearchParams(window.location.search);
+		showDebugInfo = urlParams.has('debug') && urlParams.get('debug') === 'true';
+
+		if (showDebugInfo) {
+			try {
+				const response = await fetch('/assets/debug.json');
+				const jsonData = await response.json();
+
+				commitHash = jsonData.commit;
+				gitTag = jsonData.tag;
+			} catch (error) {
+				console.error('Error loading data:', error);
+				// Display an error message or loading state
+			}
+		}
+
         changeEmoji();
-    });
+	});
 </script>
 
 <div id="socials" class="section">
@@ -266,6 +286,16 @@
 			<span class="dynamic-icon" on:click={() => openWebsite('/old')}
 				>{@html emoji}</span
 			> by Sangelo.
+			{#if showDebugInfo}
+				<div class="debug-ct">
+					<div class="debug-info">
+						<p>Commit Hash: </p><pre>{commitHash}</pre>
+					</div>
+					<div class="debug-info">
+						<p>Git Tag: </p><pre>{gitTag}</pre>
+					</div>
+				</div>
+			{/if}
 		</p>
 	</footer>
 </div>
