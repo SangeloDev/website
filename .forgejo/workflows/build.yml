@@ -32,7 +32,7 @@ jobs:
         run: |
           export TAG=$(echo "${{ github.ref }}" | sed 's/refs\/tags\///')
           export SHA=$(echo "${{ github.sha }}")
-          sed -i "s|\"commit\": \"\"|\"commit\": \"$SHA\"|" static/assets/debug.json
+          sed -i "s|\"commit\": \"\"|\"commit\": \"$SHA\"|" /workspace/sangelo/website/static/assets/debug.json
           sed -i "s|\"tag\": \"\"|\"tag\": \"$TAG\"|" /workspace/sangelo/website/static/assets/debug.json
 
       - name: 🐋 Build Container
