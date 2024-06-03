@@ -30,10 +30,10 @@ jobs:
 
       - name: Update debug.json with Git info
         run: |
-          git rev-parse HEAD > commit_hash
-          git describe --tags --abbrev=0 > tag
-          sed -i "s|\"commit\": \"\"|\"commit\": \"$(cat commit_hash)\"|" static/assets/debug.json
-          sed -i "s|\"tag\": \"\"|\"tag\": \"$(cat tag)\"|" static/assets/debug.json
+          export TAG=$(echo "${{ github.ref }}" | sed 's/refs\/tags\///')
+          export SHA=$(echo "${{ github.sha }}")
+          sed -i "s|\"commit\": \"\"|\"commit\": \"$SHA\"|" static/assets/debug.json
+          sed -i "s|\"tag\": \"\"|\"tag\": \"$TAG\"|" static/assets/debug.json
 
       - name: 🐋 Build Container
         run: |
