@@ -32,8 +32,8 @@ jobs:
         run: |
           export TAG=$(echo "${{ github.ref }}" | sed 's/refs\/tags\///')
           export SHA=$(echo "${{ github.sha }}")
-          sed -i "s|\"commit\": \"\"|\"commit\": \"$SHA\"|" /workspace/sangelo/website/static/assets/debug.json || echo "Failed to plant debug info into debug.json. (commit hash)"
-          sed -i "s|\"tag\": \"\"|\"tag\": \"$TAG\"|" /workspace/sangelo/website/static/assets/debug.json || echo "Failed to plant debug info into debug.json. (git tag)"
+          sed -i "s|\"commit\": \"unavailable\"|\"commit\": \"$SHA\"|" /workspace/sangelo/website/static/assets/debug.json || echo "Failed to plant debug info into debug.json. (commit hash)"
+          sed -i "s|\"tag\": \"unavailable\"|\"tag\": \"$TAG\"|" /workspace/sangelo/website/static/assets/debug.json || echo "Failed to plant debug info into debug.json. (git tag)"
           echo "Successfully planted debug info into debug.json"
 
       - name: 🐋 Build Container
