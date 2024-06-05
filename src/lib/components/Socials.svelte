@@ -289,7 +289,7 @@
 			{#if showDebugInfo}
 				<div class="debug-ct">
 					<div class="debug-info">
-						<p>Commit Hash: </p><pre>{commitHash}</pre>
+						Commit: <pre>{commitHash}</pre>
 					</div>
 					<div class="debug-info">
 						<p>Git Tag: </p><pre>{gitTag}</pre>
