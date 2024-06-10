@@ -50,9 +50,10 @@
 			out:fly={{ y: 200, duration: 300 }}
 		>
 			{#if contentComponent}
-                <button class="close-button" on:click={closeModal}><IconCloseCircle size="1.25em"/></button>
+                <button class="close-button" aria-label="Close Modal" on:click={closeModal}><IconCloseCircle size="1.25em"/></button>
 				<svelte:component this={contentComponent} />
 			{:else}
+				<button class="close-button" aria-label="Close Modal" on:click={closeModal}><IconCloseCircle size="1.25em"/></button>
 				<p class="error-msg"><span class="error-icon"><IconAlert size="1.5em"/></span><br>No content provided</p>
 			{/if}
 		</div>
