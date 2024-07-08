@@ -24,7 +24,7 @@
                     style="mask-type: alpha"
                     maskUnits="userSpaceOnUse"
                     x="27"
-                    y="0"
+                    y="0"t
                     width="90"
                     height="145"
                 >
@@ -51,7 +51,6 @@
             on:click={()=> smoothScrollTo('about')}
             on:keydown={handleKeydown}
             role="button"
-            aria-label="Scroll down for more"
             tabindex=0
         >
             <IconChevronDown size="1.6em" />
