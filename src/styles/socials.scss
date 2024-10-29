@@ -164,6 +164,12 @@
 	footer {
 		margin: 2em;
 
+		svg.logo {
+			height: 3em;
+			width: 3em;
+			cursor: pointer;
+		}
+
 		.footer {
 			font-size: 18px;
 		}
