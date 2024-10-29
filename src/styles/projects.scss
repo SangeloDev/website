@@ -58,19 +58,19 @@
 				cursor: default;
 				align-items: center;
 			}
-	
+
 			.one {
 				grid-area: one;
 			}
-	
+
 			.two {
 				grid-area: two;
 			}
-	
+
 			.thr {
 				grid-area: thr;
 			}
-	
+
 			.button {
 				width: 8em;
 				height: 8em;
@@ -89,39 +89,42 @@
 			.button:hover {
 				opacity: 0.9;
 			}
-	
+
 			.button:active {
 				opacity: 0.8;
 			}
-	
+
 			.inactive {
 				visibility: hidden;
 			}
-	
+
 			.sangelo {
 				background-image: url('/assets/logos/sangelos-space-website.svg');
 			}
-	
+
 			.lunivity {
 				background-image: url('/assets/logos/lunivity.svg');
 			}
-	
+
 			.gitpot {
-				background: url('/assets/icons/gitpot.svg') no-repeat center / 4.5em, radial-gradient(103.52% 103.52% at 34.04% 26.17%, #fa7042 24.28%, #d23652 120%) no-repeat center;
+				background:
+					url('/assets/icons/gitpot.svg') no-repeat center / 4.5em,
+					radial-gradient(103.52% 103.52% at 34.04% 26.17%, #fa7042 24.28%, #d23652 120%) no-repeat
+						center;
 			}
-	
-			.utility {
-				background-image: url('/assets/logos/utilityclient.svg');
+
+			.stelian {
+				background-image: url('/assets/logos/stelian-net.svg');
 			}
-	
+
 			.explorecraft {
 				background-image: url('/assets/logos/explorecraft.svg');
 			}
-	
+
 			.dashinit {
 				background-image: url('/assets/logos/dashinit.svg');
 			}
-	
+
 			.sangefault {
 				background-image: url('/assets/logos/sangefault.svg');
 			}
@@ -131,7 +134,7 @@
 				background-image: url('/assets/icons/next.svg');
 				background-size: 3em;
 			}
-			
+
 			.tip {
 				width: 10em;
 				text-align: left;
@@ -139,7 +142,7 @@
 				font-size: 25px;
 				z-index: 1;
 				margin-left: 1em;
-	
+
 				.capri {
 					color: $capri;
 				}

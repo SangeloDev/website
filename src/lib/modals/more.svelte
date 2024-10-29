@@ -52,11 +52,11 @@
 						<p class="item-description">Minecraft 1.19.2 Quilt modpack oriented towards exploration. Powered by packwiz!</p>
 					</div>
 				</a>
-				<a class="item" href="https://uc.gamingcraft.de" rel="noopener noreferrer" target="_blank" tabindex="0">
-					<div class="thumbnail"><img src="assets/logos/utilityclient.svg" alt="UtilityClient Logo" /></div>
+				<a class="item" href="https://stelian.net" rel="noopener noreferrer" target="_blank" tabindex="0">
+					<div class="thumbnail"><img src="assets/logos/stelian-net.svg" alt="stelian.net Logo" /></div>
 					<div class="item-details">
-						<h2>UtilityClient</h2>
-						<p class="item-description">Performance oriented 1.8.9 Minecraft Client. I'm responsible for UI/UX.</p>
+						<h2>stelian.net</h2>
+						<p class="item-description">My portfolio/blog website for my non-internet personality.</p>
 					</div>
 				</a>
 				<a class="item" href="https://github.com/SangeloDev/SangeFault" rel="noopener noreferrer" target="_blank" tabindex="0">
@@ -64,6 +64,13 @@
 					<div class="item-details">
 						<h2>SangeFault</h2>
 						<p class="item-description">Open-source Minecraft resourcepack for 1.8.9 </p>
+					</div>
+				</a>
+				<a class="item" href="https://utilityclient.org" rel="noopener noreferrer" target="_blank" tabindex="0">
+					<div class="thumbnail"><img src="assets/logos/utilityclient.svg" alt="UtilityClient Logo" /></div>
+					<div class="item-details">
+						<h2>UtilityClient</h2>
+						<p class="item-description">Performance oriented 1.8.9 Minecraft Client. I'm responsible for UI/UX.</p>
 					</div>
 				</a>
 			</ul>

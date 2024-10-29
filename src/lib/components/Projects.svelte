@@ -1,18 +1,17 @@
 <script lang="ts">
-
 	import { smoothScrollTo, handleKeydown } from '$lib/index';
-	
+
 	// Modal
 	import Modal from '$lib/components/Modal.svelte';
 	import DashinitModal from '$lib/modals/dashinit.svelte';
 	import SangeFaultModal from '$lib/modals/sangefault.svelte';
 	import ExploreCraftModal from '$lib/modals/explorecraft.svelte';
-	import UtilityClientModal from '$lib/modals/utilityclient.svelte';
+	import StelianNetModal from '$lib/modals/stelian-net.svelte';
 	import SangeloSpaceModal from '$lib/modals/sangelospace.svelte';
 	import LunivityModal from '$lib/modals/lunivity.svelte';
 	import GitpotModal from '$lib/modals/gitpot.svelte';
 	import MoreProjectsModal from '$lib/modals/more.svelte';
-	
+
 	let showModal = false;
 	let selectedModule: any = null;
 
@@ -24,7 +23,6 @@
 	function handleModalClose() {
 		showModal = false;
 	}
-
 </script>
 
 <div id="projects" class="section">
@@ -77,7 +75,7 @@
 					<button class="button gitpot" on:click={() => openModalWith(GitpotModal)} />
 					<button class="button dashinit" on:click={() => openModalWith(DashinitModal)} />
 					<button class="button explorecraft" on:click={() => openModalWith(ExploreCraftModal)} />
-					<button class="button utility" on:click={() => openModalWith(UtilityClientModal)} />
+					<button class="button stelian" on:click={() => openModalWith(StelianNetModal)} />
 				</div>
 				<div class="thr">
 					<button class="button inactive" />
