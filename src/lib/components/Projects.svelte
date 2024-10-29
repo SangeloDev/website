@@ -1,6 +1,11 @@
 <script lang="ts">
 	import { smoothScrollTo, handleKeydown } from '$lib/index';
 
+<<<<<<< HEAD
+=======
+	import { smoothScrollTo, handleKeydown } from '$lib/index';
+
+>>>>>>> 18dbba03a6b12b96e49fa2035d696de633ac3e6f
 	// Modal
 	import Modal from '$lib/components/Modal.svelte';
 	import DashinitModal from '$lib/modals/dashinit.svelte';

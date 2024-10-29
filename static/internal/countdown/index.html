@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--
-    (c) Sangelo
+    (c) Sangelo 2024
+	v1.0.2
+	----------------
     Simple countdown webpage that can be used as a startpage
     You can feed the date the counter should be counting down to in the URL like this:
     http://<countdown>/?date=YYYY-MM-DDTHH:MM:SS
+    or you can display the current time using ?time parameter like this:
+    http://<countdown>/?time
 -->
 <head>
     <meta charset="UTF-8">
@@ -46,6 +50,7 @@
 
         const countdownElement = document.getElementById("countdown");
         const countdownDate = getDateFromUrl();
+        const showCurrentTime = getTimeFromUrl();
 
         function updateCountdown() {
             const now = new Date().getTime();
@@ -71,6 +76,16 @@
             requestAnimationFrame(updateCountdown);
         }
 
+        function updateTime() {
+            const now = new Date();
+            const hours = formatWithLeadingZeros(now.getHours(), 2);
+            const minutes = formatWithLeadingZeros(now.getMinutes(), 2);
+            const seconds = formatWithLeadingZeros(now.getSeconds(), 2);
+
+            countdownElement.innerHTML = `${hours}:${minutes}:${seconds}`;
+            requestAnimationFrame(updateTime);
+        }
+
         function getDateFromUrl() {
             const urlParams = new URLSearchParams(window.location.search);
             const dateParam = urlParams.get('date');
@@ -83,8 +98,16 @@
             return new Date("1970-01-01T00:00:00").getTime();
         }
 
-        requestAnimationFrame(updateCountdown);
+        function getTimeFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.has('time');
+        }
+
+        if (showCurrentTime) {
+            requestAnimationFrame(updateTime);
+        } else {
+            requestAnimationFrame(updateCountdown);
+        }
     </script>
 </body>
 </html>
-
