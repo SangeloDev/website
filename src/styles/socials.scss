@@ -38,7 +38,9 @@
 		.toggle-more {
 			color: $star-gray;
 			cursor: pointer;
-			transition: transform 0.3s ease-in-out, margin 0.05s ease-out;
+			transition:
+				transform 0.3s ease-in-out,
+				margin 0.05s ease-out;
 			text-decoration: none;
 			align-self: center;
 			width: 4em;
@@ -78,6 +80,15 @@
 
 		.button.github {
 			background: linear-gradient(158deg, #24292d 55.62%, #262c30 90.01%);
+		}
+
+		.button.bluesky {
+			background: linear-gradient(186deg, #097aff 10%, #58b7fd 90%);
+
+			svg {
+				height: 3em;
+				width: 3em;
+			}
 		}
 
 		.button.email {
@@ -139,7 +150,7 @@
 			opacity: 0;
 			transition: opacity ease-in-out 0.1s;
 		}
-		
+
 		.tooltiptext {
 			z-index: 1001;
 			user-select: none;
@@ -158,7 +169,6 @@
 			visibility: hidden;
 			opacity: 0;
 		}
-
 	}
 
 	footer {
@@ -196,7 +206,8 @@
 			padding: 0;
 			gap: 0.5em;
 
-			p, pre {
+			p,
+			pre {
 				margin: 0;
 				text-wrap: nowrap;
 			}

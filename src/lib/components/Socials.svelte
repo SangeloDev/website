@@ -1,22 +1,22 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
+	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
 	import { smoothScrollTo, handleKeydown, openWebsite } from '$lib/index';
 	import { emojis } from '$lib/emojis';
 
 	// Icons
-	import IconDiscord from 'svelte-material-icons/Discord.svelte';
+	import IconMatrix from 'svelte-material-icons/Matrix.svelte';
 	import IconYouTube from 'svelte-material-icons/Youtube.svelte';
 	import IconGitHub from 'svelte-material-icons/Github.svelte';
 	import IconEmailFast from 'svelte-material-icons/EmailFast.svelte';
-	import IconMatrix from 'svelte-material-icons/Matrix.svelte';
+	// import IconDiscord from 'svelte-material-icons/Discord.svelte';
 	import IconChevronDown from 'svelte-material-icons/ChevronDown.svelte';
 	import IconChevronUp from 'svelte-material-icons/ChevronUp.svelte';
 	import IconMastodon from 'svelte-material-icons/Mastodon.svelte';
 	import IconSteam from 'svelte-material-icons/Steam.svelte';
 
 	// Variables
-	let showMore = false;
+	let showMore = true;
 	let emoji = '';
 	let commitHash = '';
 	let gitTag = '';
@@ -38,6 +38,7 @@
 	}
 
 	onMount(async () => {
+		showMore = false;
 		const urlParams = new URLSearchParams(window.location.search);
 		showDebugInfo = urlParams.has('debug') && urlParams.get('debug') === 'true';
 
@@ -54,7 +55,7 @@
 			}
 		}
 
-        changeEmoji();
+		changeEmoji();
 	});
 </script>
 
@@ -63,16 +64,16 @@
 		<div class="button-container">
 			<div class="tooltip">
 				<a
-					href="https://discord.com/users/373525255102136341"
+					href="https://matrix.to/#/@sangelo:stardust.foo"
 					target="_blank"
 					rel="noopener noreferrer me"
 					tabindex="0"
-					class="round-button button discord"
-					aria-label="Discord"
+					class="round-button button matrix"
+					aria-label="Matrix"
 				>
-					<IconDiscord class="icon" size="2.5em" />
+					<IconMatrix class="icon" size="2.5em" />
 				</a>
-				<span class="tooltiptext">@sangelo</span>
+				<span class="tooltiptext">@sangelo:stardust.foo</span>
 			</div>
 			<div class="tooltip">
 				<a
@@ -102,21 +103,45 @@
 			</div>
 			<div class="tooltip">
 				<a
-					href="mailto:contact@sangelo.space"
+					href="https://bsky.app/profile/sangelo.space"
 					target="_blank"
 					rel="noopener noreferrer me"
 					tabindex="0"
-					class="round-button button email"
-					aria-label="Email"
+					class="round-button button bluesky"
+					aria-label="Bluesky"
 				>
-					<IconEmailFast class="icon" size="3em" />
+					<svg
+						width="600"
+						height="530"
+						viewBox="0 0 600 530"
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"
+							fill="#fff"
+						/>
+					</svg>
 				</a>
-				<span class="tooltiptext">contact@sangelo.space</span>
+				<span class="tooltiptext">@sangelo.space</span>
 			</div>
 		</div>
 		<div class="button-container below">
 			{#if showMore}
 				<div class="button-container below" transition:slide>
+					<div class="tooltip">
+						<a
+							href="mailto:contact@sangelo.space"
+							target="_blank"
+							rel="noopener noreferrer me"
+							tabindex="0"
+							class="round-button button email"
+							aria-label="Email"
+						>
+							<IconEmailFast class="icon" size="3em" />
+						</a>
+						<span class="tooltiptext">contact@sangelo.space</span>
+					</div>
 					<div class="tooltip">
 						<a
 							href="https://steamcommunity.com/id/Sangelo"
@@ -130,19 +155,19 @@
 						</a>
 						<span class="tooltiptext">@Sangelo</span>
 					</div>
-					<div class="tooltip">
+					<!-- <div class="tooltip">
 						<a
-							href="https://matrix.to/#/@sangelo:stardust.foo"
+							href="https://discord.com/users/373525255102136341"
 							target="_blank"
 							rel="noopener noreferrer me"
 							tabindex="0"
-							class="round-button button matrix"
-							aria-label="Matrix"
+							class="round-button button discord"
+							aria-label="Discord"
 						>
-							<IconMatrix class="icon" size="2.5em" />
+							<IconDiscord class="icon" size="2.5em" />
 						</a>
-						<span class="tooltiptext">@sangelo:stardust.foo</span>
-					</div>
+						<span class="tooltiptext">@sangelo</span>
+					</div> -->
 					<div class="tooltip">
 						<a
 							href="https://gitpot.org/sangelo"
@@ -230,12 +255,12 @@
 			{/if}
 		</div>
 		<div
-			class="toggle-more"
+			class="toggle-more noscript-hidden"
 			on:click={toggleShowMore}
 			on:keydown={handleKeydownToggleMore}
 			role="button"
 			class:active={showMore}
-			tabindex=0
+			tabindex="0"
 		>
 			{#if showMore}
 				Less <IconChevronUp />
@@ -283,16 +308,16 @@
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			Designed and developed
-			<span class="dynamic-icon" on:click={() => openWebsite('/old')}
-				>{@html emoji}</span
-			> by Sangelo.
+			<span class="dynamic-icon" on:click={() => openWebsite('/old')}>{@html emoji}</span> by
+			Sangelo.
 			{#if showDebugInfo}
 				<div class="debug-ct">
 					<div class="debug-info">
 						Commit: <pre>{commitHash}</pre>
 					</div>
 					<div class="debug-info">
-						<p>Git Tag: </p><pre>{gitTag}</pre>
+						<p>Git Tag:</p>
+						<pre>{gitTag}</pre>
 					</div>
 				</div>
 			{/if}
