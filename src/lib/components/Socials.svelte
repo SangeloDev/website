@@ -303,7 +303,7 @@
 				<rect y="108.45" width="144.6" height="36.15" fill="#0075F7" />
 			</g>
 		</svg>
-		<p class="no-select footer footer-credits">&copy; Sangelo 2023-2025, All rights reserved.</p>
+		<p class="no-select footer footer-credits">&copy; Sangelo 2023-2026, All rights reserved.</p>
 		<p class="no-select footer footer-text">
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
